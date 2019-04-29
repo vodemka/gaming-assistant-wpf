@@ -1,0 +1,44 @@
+﻿<Window x:Class="GamingAssistant.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GamingAssistant"
+        xmlns:uc="clr-namespace:GamingAssistant.UserContorls"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        mc:Ignorable="d"
+        Title="HomeWindow" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid Height="60" VerticalAlignment="Top" Background="{DynamicResource PrimaryHueMidBrush}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!--<materialDesign:PackIcon Kind="GamepadVariant" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+                <TextBlock Text="ИГРОВОЙ АССИСТЕНТ" FontSize="28" Foreground="{DynamicResource PrimaryHueLightBrush}" FontFamily="Century Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="WindowClose">
+                <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
+            </Button>
+        </Grid>
+        
+        <!--Меню-->
+        <Grid Margin="0 60 0 0">
+            <dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem Header="HOME">
+                    <uc:Home/>
+                </TabItem>
+                <TabItem Header="GAMES" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:Games/>
+                </TabItem>
+                <TabItem Header="FRIENDS" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:Friends/>
+                </TabItem>
+                <TabItem Header="CHALLENGES" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:Challenges/>
+                </TabItem>
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</Window>
