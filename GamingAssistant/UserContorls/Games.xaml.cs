@@ -33,8 +33,8 @@ namespace GamingAssistant.UserContorls
         {
             return new List<Game>()
         {
-        new Game("GTA 5", 4.9,"/Resources/GamesImages/gta.jpg"),
-        new Game("CS: GO", 4.8,"/Resources/GamesImages/csgo.jpg"),
+        new Game("GTA 5", 4.55,"/Resources/GamesImages/gta.jpg"),
+        new Game("CS: GO", 4.4,"/Resources/GamesImages/csgo.jpg"),
         new Game("Fortnite", 5.0,"/Resources/GamesImages/fortnite.jpg"),
         new Game("Dota 2", 4.1,"/Resources/GamesImages/dota2.jpeg"),
         new Game("Paladins", 3.5,"/Resources/GamesImages/paladins.jpeg"),

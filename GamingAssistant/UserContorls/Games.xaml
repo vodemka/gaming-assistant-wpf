@@ -6,7 +6,15 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:GamingAssistant.UserContorls"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="1080">
+             d:DesignHeight="550" d:DesignWidth="1080"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+             >
     <Grid Background="White">
         <ScrollViewer>
             <StackPanel>
@@ -17,14 +25,14 @@
                             <DataTemplate>
                                 <Border Margin="15" BorderBrush="Black" Width="130" Height="180">
                                     <StackPanel>
-                                        <Border Width="120" Height="120" CornerRadius="5" Margin="5">
-                                            <Border.Effect>
+                                        <Button Width="120" Height="120" Margin="5">
+                                            <Button.Effect>
                                                 <DropShadowEffect ShadowDepth="1"/>
-                                            </Border.Effect>
-                                            <Border.Background>
+                                            </Button.Effect>
+                                            <Button.Background>
                                                 <ImageBrush ImageSource="{Binding Image}"/>
-                                            </Border.Background>
-                                        </Border>
+                                            </Button.Background>
+                                        </Button>
                                         <materialDesign:RatingBar Value="{Binding Rating}" IsReadOnly="True"  x:Name="ReadOnlyRatingBar" />
                                         <TextBlock Margin="5 0" Text="{Binding Name}" FontSize="15"/>
                                     </StackPanel>

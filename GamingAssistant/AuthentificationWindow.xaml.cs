@@ -48,5 +48,12 @@ namespace GamingAssistant
             loader.ShowDialog();
             loader.Close();
         }
+
+        private void LogLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow homeWindow = new HomeWindow();
+            Close();
+            homeWindow.Show();
+        }
     }
 }

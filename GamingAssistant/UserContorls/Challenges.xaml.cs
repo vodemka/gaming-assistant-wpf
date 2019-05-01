@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace GamingAssistant.UserContorls
     /// </summary>
     public partial class Challenges : UserControl
     {
-        public List<Challenge> challenges;
+        public ObservableCollection<Challenge> challenges;
         public Challenges()
         {
             InitializeComponent();
@@ -29,18 +30,24 @@ namespace GamingAssistant.UserContorls
             ShowChallenges();
         }
 
-        private List<Challenge> GetChallenges()
+        private ObservableCollection<Challenge> GetChallenges()
         {
-            return new List<Challenge>()
+            return new ObservableCollection<Challenge>()
         {
-        new Challenge("Убей 100 врагов", "Нужно убить 100 врагов в игре Fortnite", new User(){Username="Vadim"}, new Game("FORTNITE",5.0,"/Resources/GamesImages/fortnite.jpg")),
-        new Challenge("Убей 200 врагов", "Нужно убить 100 врагов в игре PUBG", new User(){Username="Nikita"}, new Game("PUBG",5.0,"/Resources/GamesImages/pubg.jpeg"))
-        };
+        new Challenge("Киллер", "Нужно убить 100 врагов в игре Fortnite", new User(){Username="Вадим"}, new Game("FORTNITE",5.0,"/Resources/GamesImages/fortnite.jpg")),
+        new Challenge("Потрошитель", "Нужно убить 200 врагов в игре PUBG", new User(){Username="Никита"}, new Game("PUBG",5.0,"/Resources/GamesImages/pubg.jpeg")),
+        new Challenge("Золотая лихорадка", "Нужно создать 32 золотых блока в игре Minecraft", new User(){Username="Вероника"}, new Game("MINECRAFT",5.0,"/Resources/GamesImages/minecraft.png")),
+        new Challenge("Футболист", "Нужно забить 7 голов сопернику в игре Rocket League", new User(){Username="Саша"}, new Game("ROCKET LEAGUE",5.0,"/Resources/GamesImages/rocket.jpg")),
+        new Challenge("Киллер", "Нужно убить 100 врагов в игре Fortnite", new User(){Username="Вадим"}, new Game("FORTNITE",5.0,"/Resources/GamesImages/fortnite.jpg")),
+        new Challenge("Потрошитель", "Нужно убить 200 врагов в игре PUBG", new User(){Username="Никита"}, new Game("PUBG",5.0,"/Resources/GamesImages/pubg.jpeg")),
+        new Challenge("Золотая лихорадка", "Нужно создать 32 золотых блока в игре Minecraft", new User(){Username="Вероника"}, new Game("MINECRAFT",5.0,"/Resources/GamesImages/minecraft.png")),
+        new Challenge("Футболист", "Нужно забить 7 голов сопернику в игре Rocket League", new User(){Username="Саша"}, new Game("ROCKET LEAGUE",5.0,"/Resources/GamesImages/rocket.jpg"))
+            };
         }
 
         private void AddNewChallengeClick(object sender, RoutedEventArgs e)
         {
-            CreateChallengeWindow createChallengeWindow = new CreateChallengeWindow();
+            CreateChallengeWindow createChallengeWindow = new CreateChallengeWindow(this);
             createChallengeWindow.ShowDialog();
         }
 

@@ -6,7 +6,14 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:GamingAssistant.UserContorls"
              mc:Ignorable="d" 
-             d:DesignHeight="490" d:DesignWidth="1080">
+             d:DesignHeight="490" d:DesignWidth="1080"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="10"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}" xml:lang="ru-RU" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -18,12 +25,43 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Background="{DynamicResource PrimaryHueMidBrush}">
             <materialDesign:Chip x:Name="userInfoChip" Icon="V"  Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top"/>
-            <ListBox IsEnabled="True">
-                <Button Content="Вызовы" Width="190"/>
-                <Button Content="Мои игры" Width="190"/>
-                <Button Content="Оставить отзыв" Width="190"/>
-                <Button Content="Сменить аккаунт" Width="190"/>
-            </ListBox>
+            <Image Source="/Resources/Icons/user.png" Height="50" Width="50" HorizontalAlignment="Left" Margin="8 12 0 8"></Image>
+            <!--<ListView IsEnabled="True" FontSize="16" Foreground="White">-->
+            <StackPanel>
+                <Button Content="ВЫЗОВЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
+                <Button Content="МОИ ИГРЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
+                <Button Content="ОСТАВИТЬ ОТЗЫВ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
+                <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
+            </StackPanel>
+           
+            <!--<ListViewItem HorizontalAlignment="Left" Width="210">
+                    <Button Content="Вызовы" Width="210" HorizontalAlignment="Left"/>
+                    --><!--<TextBlock Text="Вызовы"/>--><!--
+                </ListViewItem>
+                <ListViewItem HorizontalAlignment="Left" Width="210">
+                    <Button Content="Мои игры" Width="210" HorizontalAlignment="Left"/>
+                    --><!--<TextBlock>Мои игры</TextBlock>--><!--
+                </ListViewItem>
+                <ListViewItem HorizontalAlignment="Left" Width="210">
+                    <Button Content="Оставить отзыв" Width="210" HorizontalAlignment="Left"/>
+                    --><!--<TextBlock>Оставить отзыв</TextBlock>--><!--
+                </ListViewItem>
+                <ListViewItem HorizontalAlignment="Left" Width="210">
+                    <Button Content="Сменить аккаунт" Width="210" HorizontalAlignment="Left"/>
+                    --><!--<TextBlock>Сменить аккаунт</TextBlock>--><!--
+                </ListViewItem>
+            </ListView>-->
         </StackPanel>
-      </Grid>
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">
+            <!--<materialDesign:Card Padding="13" Margin="10">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ВАШИ ДОСТИЖЕНИЯ:</TextBlock>
+            </materialDesign:Card>-->
+            <ProgressBar Value="75" Height="10" Margin="10"/>
+        </StackPanel>
+        <materialDesign:MaterialDateDisplay IsEnabled="True" Margin="8" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}">
+            <materialDesign:MaterialDateDisplay.Language>
+                Russian
+            </materialDesign:MaterialDateDisplay.Language>
+        </materialDesign:MaterialDateDisplay>
+    </Grid>
 </UserControl>

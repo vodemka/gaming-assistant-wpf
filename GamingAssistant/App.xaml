@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:GamingAssistant"
              xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-             StartupUri="HomeWindow.xaml">
+             StartupUri="AuthentificationWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
 
@@ -15,7 +15,6 @@
 
                 <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/materialdesign.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
             <Style TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}"></Style>
         </ResourceDictionary>
     </Application.Resources>
