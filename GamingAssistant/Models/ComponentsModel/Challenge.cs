@@ -8,23 +8,36 @@ namespace GamingAssistant.Models.ComponentsModel
 {
     public class Challenge
     {
-        public string TextOfChallenge { get; set; }
-        public string ChallengeTitle { get; set; }
-        public User CreatorOfChallenge { get; set; }
-        public Game GameForChallenge { get; set; }
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public string Title { get; set; }
 
-        public Challenge(string title, string text, User user, Game game)
+        public virtual User Creator { get; set; }
+        public int? CreatorId { get; set; }
+
+        public virtual Game Game { get; set; }
+        public int? GameId { get; set; }
+
+        public int CountOfComplete { get; set; }
+        public virtual ICollection<User> Users { get; set; }
+
+        public Challenge()
         {
-            ChallengeTitle = title;
-            TextOfChallenge = text;
-            CreatorOfChallenge = user;
-            GameForChallenge = game;
+            Users = new List<User>();
         }
 
-        public override string ToString()
-        {
-            return TextOfChallenge;
-        }
+        //public Challenge(string title, string text, User user, Game game)
+        //{
+        //    Title = title;
+        //    Text = text;
+        //    Creator = user;
+        //    Game = game;
+        //}
+
+        //public override string ToString()
+        //{
+        //    return Text;
+        //}
     }
 
    

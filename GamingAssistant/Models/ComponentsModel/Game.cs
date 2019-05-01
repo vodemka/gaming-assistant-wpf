@@ -8,20 +8,28 @@ namespace GamingAssistant.Models.ComponentsModel
 {
     public class Game
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public double Rating { get; set; }
         public string Image { get; set; }
-
-        public Game(string name, double rating, string image)
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<User> Users { get; set; }
+        public Game()
         {
-            Name = name;
-            Rating = rating;
-            Image = image;
+            Comments = new List<Comment>();
+            Users = new List<User>();
         }
 
-        public override string ToString()
-        {
-            return Name;
-        }
+        //public Game(string name, double rating, string image)
+        //{
+        //    Name = name;
+        //    Rating = rating;
+        //    Image = image;
+        //}
+
+        //public override string ToString()
+        //{
+        //    return Name;
+        //}
     }
 }

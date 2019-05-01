@@ -23,6 +23,10 @@ namespace GamingAssistant
         public RegisterWindow()
         {
             InitializeComponent();
+            
+            regLoginTextBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
+            regPasswordBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
+            regConfirmPasswordBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
             regLoginTextBox.Focus();
         }
 
@@ -45,36 +49,39 @@ namespace GamingAssistant
                     ConfirmPassword = confirmPassword
                 };
 
-                MessageBox.Show(registerModel.Login);
-                MessageBox.Show(registerModel.Password);
-
                 if (Validation.TryValidateObject(registerModel, regLoginTextBox, regPasswordBox, regConfirmPasswordBox))
 
                 {
-                    //SaltedHash saltedHash = new SaltedHash(password);
-                    //bool isTeacher = (bool)isTeacherCheckBox.IsChecked;
+                    SaltedHash saltedHash = new SaltedHash(password);
+                    //bool isAdmin = (bool)isAdminCheckBox.IsChecked;
 
-                    //using (AppDbContext db = new AppDbContext())
-                    //{
-                    //    var sameUser = db.Users.FirstOrDefault(u => u.Username == username);
-                    //    if (sameUser == null)
-                    //    {
-                    User user = new User()
+                    using (AppDbContext db = new AppDbContext())
                     {
-                        Username = username,
-                        Password = password
-                    };
-                    OpenAuthentificationWindow();
+                        var sameUser = db.Users.FirstOrDefault(u => u.Username == username);
+                        if (sameUser == null)
+                        {
+                            User user = new User()
+                            {
+                                Username = username,
+                                Salt = saltedHash.Salt,
+                                Hash = saltedHash.Hash,
+                                //IsAdmin = isAdmin
+                            };
+                            db.Users.Add(user);
+                            db.SaveChanges();
+                            ShowLoginWindow();
+                        }
+                        else
+                        {
+                            regLoginTextBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                            regLoginTextBox.ToolTip = new ToolTip() { Content = "Это имя пользователя уже занято" };
+                        }
+                    }
                 }
-                //else
-                //{
-                //    regLoginTextBox.BorderBrush = new SolidColorBrush(Colors.Red);
-                //    regLoginTextBox.ToolTip = new ToolTip() { Content = "This username is already taken" };
-                //}
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
             }
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -84,14 +91,21 @@ namespace GamingAssistant
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            ShowLoginWindow();
+        }
+
+        private void ShowLoginWindow()
+        {
             AuthentificationWindow authentification = new AuthentificationWindow();
-            this.Close();
+            Close();
+            //------------LOADER---------------
             Thread myThread = new Thread(new ThreadStart(ShowLoader));
             myThread.SetApartmentState(ApartmentState.STA);
-            myThread.Start(); // запускаем поток
-            Thread.Sleep(1500);
+            myThread.Start();
+            Thread.Sleep(1000);
             myThread.Abort();
             authentification.Show();
+            //---------------------------------
         }
 
         private static void ShowLoader()
@@ -100,21 +114,5 @@ namespace GamingAssistant
             loader.ShowDialog();
             loader.Close();
         }
-
-        private void OpenAuthentificationWindow()
-        {
-            AuthentificationWindow authentification = new AuthentificationWindow();
-            Close();
-            Thread myThread = new Thread(new ThreadStart(ShowLoader));
-            myThread.SetApartmentState(ApartmentState.STA);
-            myThread.Start(); // запускаем поток
-            Thread.Sleep(1500);
-            myThread.Abort();
-            authentification.Show();
-        }
-        //private void Validation()
-        //{
-        //    if (regis)
-        //}
     }
 }

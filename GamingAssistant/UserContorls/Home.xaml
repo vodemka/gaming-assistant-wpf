@@ -24,14 +24,14 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Background="{DynamicResource PrimaryHueMidBrush}">
-            <materialDesign:Chip x:Name="userInfoChip" Icon="V"  Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top"/>
+            <materialDesign:Chip x:Name="userInfoChip" Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top"/>
             <Image Source="/Resources/Icons/user.png" Height="50" Width="50" HorizontalAlignment="Left" Margin="8 12 0 8"></Image>
             <!--<ListView IsEnabled="True" FontSize="16" Foreground="White">-->
             <StackPanel>
                 <Button Content="ВЫЗОВЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
                 <Button Content="МОИ ИГРЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
                 <Button Content="ОСТАВИТЬ ОТЗЫВ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
-                <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
+                <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}" Click="ChangeUserButton_Click"/>
             </StackPanel>
            
             <!--<ListViewItem HorizontalAlignment="Left" Width="210">

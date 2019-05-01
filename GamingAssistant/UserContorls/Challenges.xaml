@@ -19,7 +19,7 @@
                 <TextBlock Text="Challenges" Margin="10" FontSize="22" FontWeight="Medium"/>
                 <Button Width="110" Content="Create new" Click="AddNewChallengeClick"/>
             </StackPanel>
-            <DataGrid x:Name="DataGridChallenges" FontSize="14" Margin="0 3 0 0" MaxHeight="500" IsReadOnly="True" CanUserSortColumns="True"  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <DataGrid x:Name="DataGridChallenges" FontSize="14" Margin="0 3 0  0" MaxHeight="500" IsReadOnly="True" CanUserSortColumns="True"  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Игра" Width="Auto">
                         <DataGridTemplateColumn.CellTemplate>
@@ -32,9 +32,9 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Binding="{Binding ChallengeTitle}" Header="Заголовок" Width="160"/>
-                    <DataGridTextColumn Binding="{Binding TextOfChallenge}" Header="Задание" Width="380"/>
-                    <DataGridTextColumn Binding="{Binding CreatorOfChallenge.Username}" Header="Создатель" Width="110"/>
+                    <DataGridTextColumn Binding="{Binding Title}" Header="Заголовок" Width="160"/>
+                    <DataGridTextColumn Binding="{Binding Text}" Header="Задание" Width="380"/>
+                    <DataGridTextColumn Binding="{Binding Creator.Username}" Header="Создатель" Width="110"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

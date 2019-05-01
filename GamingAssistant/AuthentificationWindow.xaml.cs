@@ -23,6 +23,63 @@ namespace GamingAssistant
         public AuthentificationWindow()
         {
             InitializeComponent();
+            logLoginTextBox.Focus();
+        }
+
+        private void Authentification()
+        {
+            try
+            {
+                string username = logLoginTextBox.Text;
+                string password = logPasswordBox.Password;
+
+                AuthentificationModel loginModel = new AuthentificationModel() { Login = username, Password = password };
+
+                if (Validation.TryValidateObject(loginModel, logLoginTextBox, logPasswordBox, null))
+                {
+                    using (AppDbContext db = new AppDbContext())
+                    {
+                        var user = db.Users.FirstOrDefault(u => u.Username == username);
+                        if (user != null)
+                        {
+                            if (SaltedHash.Verify(user.Salt, user.Hash, password))
+                            {
+                                App.CurrentUser = user;
+
+                                //if (user.IsAdmin)
+                                //{
+                                //}else
+                                {
+                                    HomeWindow homeWindow = new HomeWindow();
+                                    Close();
+                                    //------------LOADER---------------
+                                    Thread myThread = new Thread(new ThreadStart(ShowLoader));
+                                    myThread.SetApartmentState(ApartmentState.STA);
+                                    myThread.Start();
+                                    Thread.Sleep(1000);
+                                    myThread.Abort();
+                                    homeWindow.Show();
+                                    //---------------------------------
+                                }
+                            }
+                            else
+                            {
+                                logPasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                                logPasswordBox.ToolTip = new ToolTip() { Content = "Неверный пароль" };
+                            }
+                        }
+                        else
+                        {
+                            logLoginTextBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                            logLoginTextBox.ToolTip = new ToolTip() { Content = "Пользователь с таким именем не найден" };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+            }
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -34,12 +91,14 @@ namespace GamingAssistant
         {
             RegisterWindow registerWindow = new RegisterWindow();
             this.Close();
+            //------------LOADER---------------
             Thread myThread = new Thread(new ThreadStart(ShowLoader));
             myThread.SetApartmentState(ApartmentState.STA);
-            myThread.Start(); // запускаем поток
-            Thread.Sleep(1500);
+            myThread.Start();
+            Thread.Sleep(1000);
             myThread.Abort();
             registerWindow.Show();
+            //---------------------------------
         }
 
         private static void ShowLoader()
@@ -51,9 +110,23 @@ namespace GamingAssistant
 
         private void LogLoginButton_Click(object sender, RoutedEventArgs e)
         {
-            HomeWindow homeWindow = new HomeWindow();
-            Close();
-            homeWindow.Show();
+            Authentification();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Selphinio - petr2019
+//Vadimka - vadimka2000

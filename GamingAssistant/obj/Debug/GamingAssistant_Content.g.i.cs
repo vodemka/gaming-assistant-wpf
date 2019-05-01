@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/icons/user.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/assassin.jpeg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/clash.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/fifa.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/lol.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/metro.jpeg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/gamesimages/witcher.jpeg")]
 
 

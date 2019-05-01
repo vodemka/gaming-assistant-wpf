@@ -71,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppDbContext.cs" />
     <Compile Include="AuthentificationWindow.xaml.cs">
       <DependentUpon>AuthentificationWindow.xaml</DependentUpon>
     </Compile>
@@ -83,11 +84,14 @@
     <Compile Include="Loader.xaml.cs">
       <DependentUpon>Loader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ComponentsModel\AcceptedChallenge.cs" />
     <Compile Include="Models\ComponentsModel\Challenge.cs" />
+    <Compile Include="Models\ComponentsModel\Comment.cs" />
     <Compile Include="Models\ComponentsModel\Game.cs" />
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SaltedHash.cs" />
     <Compile Include="UserContorls\Challenges.xaml.cs">
       <DependentUpon>Challenges.xaml</DependentUpon>
     </Compile>
@@ -198,6 +202,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GamesImages\assassin.jpeg" />
+    <Resource Include="Resources\GamesImages\clash.jpg" />
+    <Resource Include="Resources\GamesImages\fifa.jpg" />
+    <Resource Include="Resources\GamesImages\lol.jpg" />
+    <Resource Include="Resources\GamesImages\metro.jpeg" />
+    <Resource Include="Resources\GamesImages\witcher.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
