@@ -16,6 +16,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
              >
     <Grid Background="White">
+        <Rectangle x:Name="hideGamesRectangle" Width="1080" Height="550" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"></Rectangle>
         <ScrollViewer>
             <StackPanel>
                 <TextBlock Text="Games" Margin="10" FontSize="22" FontWeight="Medium"/>
@@ -23,9 +24,10 @@
                     <ItemsControl x:Name="ListViewGames" ItemsSource="{Binding Game}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Border Margin="15" BorderBrush="Black" Width="130" Height="180">
+                                <Border Margin="15" BorderBrush="Black" Width="130" Height="190">
                                     <StackPanel>
-                                        <Button Width="120" Height="120" Margin="5">
+                                        <!--<TextBlock x:Name="ifAdded" Margin="7 0 0 0" Text="Добавлена" FontSize="10" ></TextBlock>-->
+                                        <Button Width="120" Height="120" Margin="5" Tag="{Binding}" Click="OpenGame_Click">
                                             <Button.Effect>
                                                 <DropShadowEffect ShadowDepth="1"/>
                                             </Button.Effect>
@@ -48,6 +50,5 @@
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
-        <!--<ListView x:Name="listOfGames"/>-->
     </Grid>
 </UserControl>

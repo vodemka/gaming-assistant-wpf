@@ -45,3 +45,12 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.dll
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.xml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\BespokeFusion.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\System.Windows.Interactivity.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.baml

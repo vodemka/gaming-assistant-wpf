@@ -1,5 +1,4 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
-using static GamingAssistant.UserContorls.Challenges;
 using GamingAssistant.UserContorls;
 using System;
 using System.Collections.Generic;
@@ -14,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace GamingAssistant
 {
@@ -26,32 +26,25 @@ namespace GamingAssistant
         public CreateChallengeWindow()
         {
             InitializeComponent();
-            ComboBoxGames.SelectedIndex = 0;
-            //var games = GetGames();
-            //if (games.Count > 0)
-            //    ComboBoxGames.ItemsSource = games;
         }
         public CreateChallengeWindow(Challenges ch)
         {
             challengesWindow = ch;
             InitializeComponent();
-            //ComboBoxGames.SelectedIndex = 0;
-            //var games = GetGames();
-            //if (games.Count > 0)
-            //    ComboBoxGames.ItemsSource = games;
+            List<string> listOfGames = new List<string>();
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Games.Load();
+                db.Users.Load();
+                User user = db.Users.Find(App.CurrentUser.Id);
+                foreach (var game in user.Games)
+                {
+                    listOfGames.Add(game.Name);
+                }
+            }
+            ComboBoxGames.ItemsSource = listOfGames;
+            ComboBoxGames.SelectedIndex = 0;
         }
-
-        //private List<Game> GetGames()
-        //{
-        //    return new List<Game>()
-        //{
-        //new Game("GTA 5", 5.0,"/Resources/GamesImages/gta.jpg"),
-        //new Game("CS: GO", 4.8,"/Resources/GamesImages/csgo.jpg"),
-        //new Game("Fortnite", 5.0,"/Resources/GamesImages/fortnite.jpg"),
-        //new Game("Dota 2", 4.1,"/Resources/GamesImages/dota2.jpeg"),
-        //new Game("Paladins", 3.5,"/Resources/GamesImages/paladins.jpeg")
-        //};
-        //}
 
         private void WindowClose(object sender, RoutedEventArgs e)
         {
@@ -60,11 +53,22 @@ namespace GamingAssistant
 
         private void AddNewChallengeClick(object sender, RoutedEventArgs e)
         {
-            //Challenge createdChallenge = new Challenge(titleOfCreatedChallenge.Text, textOfCreatedChallenge.Text, new User() { Username = "Вадим" }, new Game(ComboBoxGames.SelectedItem.ToString(), 5.0, "/Resources/GamesImages/default.jpg"));
-            //challengesWindow.challenges.Add(createdChallenge);
-            ////challengesWindow.DataGridChallenges.ItemsSource = null;
-            ////challengesWindow.DataGridChallenges.ItemsSource = challengesWindow.challenges;
+            NewChallenge(App.CurrentUser);
             Close();
+        }
+        private void NewChallenge(User user)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Games.Load();
+                db.Users.Load();
+                Game selectedgame = db.Games.Local.Single(p => p.Name.Equals(ComboBoxGames.SelectedItem.ToString()));
+                User selectedUser = db.Users.Local.Single(p => p.Id.Equals(user.Id));
+                Challenge createdChallenge = new Challenge { Title = titleOfCreatedChallenge.Text, Text = textOfCreatedChallenge.Text, Creator = selectedUser, Game = selectedgame };
+                challengesWindow.challenges.Add(createdChallenge);
+                db.Challenges.Add(createdChallenge);
+                db.SaveChanges();
+            }
         }
     }
 }

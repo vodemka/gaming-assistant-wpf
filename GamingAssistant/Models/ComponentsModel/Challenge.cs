@@ -26,18 +26,10 @@ namespace GamingAssistant.Models.ComponentsModel
             Users = new List<User>();
         }
 
-        //public Challenge(string title, string text, User user, Game game)
-        //{
-        //    Title = title;
-        //    Text = text;
-        //    Creator = user;
-        //    Game = game;
-        //}
-
-        //public override string ToString()
-        //{
-        //    return Text;
-        //}
+        public override string ToString()
+        {
+            return Text;
+        }
     }
 
    

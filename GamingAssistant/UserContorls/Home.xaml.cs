@@ -1,5 +1,8 @@
-﻿using System;
+﻿using GamingAssistant.Models.ComponentsModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,11 +24,13 @@ namespace GamingAssistant.UserContorls
     /// </summary>
     public partial class Home : UserControl
     {
+        public ObservableCollection<Game> games;
         public Home()
         {
-            InitializeComponent();
-            userInfoChip.Icon = App.CurrentUser.Username[0];
-            userInfoChip.Content = App.CurrentUser.Username.ToUpper();
+                InitializeComponent();
+                userInfoChip.Icon = App.CurrentUser.Username[0];
+                userInfoChip.Content = App.CurrentUser.Username.ToUpper();
+                ShowUserGames();
         }
 
         private void ChangeUserButton_Click(object sender, RoutedEventArgs e)
@@ -36,18 +41,68 @@ namespace GamingAssistant.UserContorls
             {
                 parentWindow.Close();
             }
+            //------------LOADER---------------
             Thread myThread = new Thread(new ThreadStart(ShowLoader));
             myThread.SetApartmentState(ApartmentState.STA);
-            myThread.Start(); // запускаем поток
-            Thread.Sleep(1500);
+            myThread.Start();
+            Thread.Sleep(1000);
             myThread.Abort();
             authentificationWindow.Show();
+            //---------------------------------
         }
         private static void ShowLoader()
         {
             Loader loader = new Loader();
             loader.ShowDialog();
             loader.Close();
+        }
+
+        private void ShowUserGames()
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                int countOfGames = 0;
+                games = new ObservableCollection<Game>();
+                db.Games.Load();
+                db.Users.Load();
+                User user = db.Users.Find(App.CurrentUser.Id);
+                foreach (var game in user.Games)
+                {
+                    games.Add(game);
+                    countOfGames++;
+                }
+                CountOfUserGamesTextBox.Text = "Количество игр на аккаунте: " + countOfGames;
+                DataGridUserGames.ItemsSource = games;
+            }
+        }
+
+        private void RefreshUserGames_Click(object sender, RoutedEventArgs e)
+        {
+            ShowUserGames();
+        }
+
+        private void GoToChallenges_Click(object sender, RoutedEventArgs e)
+        {
+            //HomeWindow current = new HomeWindow();
+            //current.NavigationMenu.SelectedIndex = 1;
+            HomeWindow parentWindow = (HomeWindow)Window.GetWindow((DependencyObject)sender);
+            if (parentWindow != null)
+            {
+                parentWindow.NavigationMenu.SelectedIndex = 3;
+            }
+        }
+
+        private void LeaveComment_Click(object sender, RoutedEventArgs e)
+        {
+            LeaveCommentWindow leaveCommentWindow = new LeaveCommentWindow(this);
+            hideAllRectangle.Opacity = 0.4;
+            DataGridUserGames.Opacity = 0.6;
+            leaveCommentWindow.ShowDialog();
+        }
+
+        private void DeleteGame_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

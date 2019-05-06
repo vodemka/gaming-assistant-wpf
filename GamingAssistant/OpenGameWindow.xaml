@@ -1,0 +1,33 @@
+﻿<Window x:Class="GamingAssistant.OpenGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GamingAssistant"
+        mc:Ignorable="d"
+        Title="OpenGameWindow" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <Label x:Name="currentGameLabel" FontSize="16" Content="GAME" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0"/>
+        <ListView x:Name="listOfComments" Width="750" Height="400" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <!--<TreeView x:Name="listOfComments" MinWidth="220">
+            --><!--<TreeViewItem Header="Fruit">
+               
+                --><!--<TreeViewItem Header="Banana" />
+                <TreeViewItem Header="Grape"/>
+                <TreeViewItem Header="Peach" />
+                <TreeViewItem Header="Pear" />
+                <TreeViewItem Header="Strawberry" />--><!--
+            </TreeViewItem>--><!--
+        </TreeView>-->
+
+        </ListView>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="buttonAdd" Width="110" Content="Add" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="AddButton_Click"/>
+            <Button Width="110" Content="Close" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="ExitButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

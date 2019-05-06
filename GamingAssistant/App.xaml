@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:GamingAssistant"
              xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
              StartupUri="AuthentificationWindow.xaml">
+             <!--StartupUri="HomeWindow.xaml">-->
     <Application.Resources>
         <ResourceDictionary>
 

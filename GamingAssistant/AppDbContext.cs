@@ -33,8 +33,8 @@ namespace GamingAssistant
             //         .HasForeignKey(bc => bc.ChallengeId);
             // }
             modelBuilder.Entity<User>()
-    .HasMany(p => p.Challenges)
-    .WithMany(c => c.Users);
+            .HasMany(p => p.Challenges)
+            .WithMany(c => c.Users);
         }
     }
 }

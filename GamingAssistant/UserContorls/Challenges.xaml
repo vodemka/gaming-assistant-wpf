@@ -24,7 +24,7 @@
                     <DataGridTemplateColumn Header="Игра" Width="Auto">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Height="60" Width="60" Source="{Binding GameForChallenge.Image}">
+                                <Image Height="60" Width="60" Source="{Binding Game.Image}">
                                     <Image.Effect>
                                         <DropShadowEffect ShadowDepth="1"/>
                                     </Image.Effect>

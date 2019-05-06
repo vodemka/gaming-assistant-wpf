@@ -30,7 +30,7 @@
         
         <!--Меню-->
         <Grid Margin="0 60 0 0">
-            <dragablz:TabablzControl FixedHeaderCount="4">
+            <dragablz:TabablzControl FixedHeaderCount="4" x:Name="NavigationMenu">
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>

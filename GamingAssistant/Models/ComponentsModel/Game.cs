@@ -20,16 +20,9 @@ namespace GamingAssistant.Models.ComponentsModel
             Users = new List<User>();
         }
 
-        //public Game(string name, double rating, string image)
-        //{
-        //    Name = name;
-        //    Rating = rating;
-        //    Image = image;
-        //}
-
-        //public override string ToString()
-        //{
-        //    return Name;
-        //}
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

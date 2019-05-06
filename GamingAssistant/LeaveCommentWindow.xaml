@@ -1,0 +1,35 @@
+﻿<Window x:Class="GamingAssistant.LeaveCommentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamingAssistant"
+        mc:Ignorable="d"
+        Title="LeaveCommentWindow" Height="350" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <Label Content="Выберите игру" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center"></Label>
+            </StackPanel>
+            
+            <StackPanel Margin="5 10 5 0">
+                <ComboBox x:Name="ComboBoxGames" Width="300"></ComboBox>
+                <TextBox x:Name="textOfComment" Width="400" Height="200" BorderBrush="Black" TextWrapping="Wrap"
+                         Margin="0 10 0 0"
+                        VerticalAlignment="Stretch"
+                        MinWidth="280"
+                        AcceptsReturn="True"
+                        VerticalScrollBarVisibility="Auto"
+                        SpellCheck.IsEnabled="True"></TextBox>  
+            </StackPanel>
+        
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="buttonAdd" Width="110" Content="Отправить" VerticalAlignment="Bottom" Margin="4 25 4 5" Click="SendButton_Click"/>
+                <Button Width="110" Content="Закрыть" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="ExitButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
