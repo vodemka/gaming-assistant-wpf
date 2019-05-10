@@ -16,6 +16,11 @@ namespace GamingAssistant.Models.ComponentsModel
         public virtual Challenge Challenge { get; set; }
 
         public bool IsCompleted { get; set; } = false;
+        public string ProofLink { get; set; }
+        public DateTime? AcceptTime { get; set; } = null;
+        public DateTime? ConfirmTime { get; set; } = null;
+        public bool IsUserReady { get; set; } = false;
+
         public UserChallenge()
         {
 

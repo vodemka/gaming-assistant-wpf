@@ -118,5 +118,31 @@ namespace GamingAssistant.UserContorls
                 MessageBox.Show("Сначала нужно выбрать игру", "Ошибка");
             }
         }
+
+        private void OpenChallengeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            bool flag = true;
+            using (AppDbContext db = new AppDbContext())
+            {
+                User tempUser = db.Users.Find(App.CurrentUser.Id);
+                if (tempUser.UserChallenge.Where(p=>p.IsCompleted == false).Count() == 0) { flag = false; }
+                //foreach (var ch in tempUser.UserChallenge)
+                //{
+                //    if (ch.IsCompleted) { flag = false; }
+                //}
+            }
+            if (!flag)
+            {
+                MessageBox.Show("У Вас нет активных вызовов", "Упс..");
+            }
+            else
+            
+            {
+                AcceptedChallengeWindow challengeWindow = new AcceptedChallengeWindow(this);
+                hideAllRectangle.Opacity = 0.4;
+                DataGridUserGames.Opacity = 0.6;
+                challengeWindow.ShowDialog();
+            }
+        }
     }
 }

@@ -53,8 +53,23 @@ namespace GamingAssistant
 
         private void AddNewChallengeClick(object sender, RoutedEventArgs e)
         {
-            NewChallenge(App.CurrentUser);
-            Close();
+            if (titleOfCreatedChallenge.Text == String.Empty)
+            {
+                MessageBox.Show("Укажите заголовок вызова", "Ошибка");
+            }
+            else if (textOfCreatedChallenge.Text == String.Empty)
+            {
+                MessageBox.Show("Напишите задание вызова", "Ошибка");
+            }
+            else if (ComboBoxGames.SelectedItem == null)
+            {
+                MessageBox.Show("Сначала нужно добавить игру", "Упс..");
+            }
+            else
+            {
+                NewChallenge(App.CurrentUser);
+                Close();
+            }
         }
         private void NewChallenge(User user)
         {

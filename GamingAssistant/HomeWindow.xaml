@@ -39,8 +39,8 @@
                 <TabItem Header="GAMES" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <uc:Games/>
                 </TabItem>
-                <TabItem Header="FRIENDS" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <uc:Friends/>
+                <TabItem Header="ACTIVE CHALLENGES" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:ActiveChallenges/>
                 </TabItem>
                 <TabItem Header="CHALLENGES" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <uc:Challenges/>

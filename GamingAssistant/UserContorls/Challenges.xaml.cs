@@ -68,5 +68,62 @@ namespace GamingAssistant.UserContorls
             CreateChallengeWindow createChallengeWindow = new CreateChallengeWindow(this);
             createChallengeWindow.ShowDialog();
         }
+
+        private void TakeChallengeClick(object sender, RoutedEventArgs e)
+        {
+            if (DataGridChallenges.SelectedItem != null)
+            {
+                Challenge selectedChallenge = (Challenge)DataGridChallenges.SelectedItem;
+                using (AppDbContext db = new AppDbContext())
+                {
+                    db.Challenges.Load();
+                    Challenge challenge = db.Challenges.Find(selectedChallenge.Id);
+                    User user = db.Users.Find(App.CurrentUser.Id);
+                    int countOfActiveChallengesOnUser = user.UserChallenge.Where(p => p.IsCompleted == false).Count();
+                    bool isCreatedByUser = false;
+                    bool isUserHaveAnyActive = countOfActiveChallengesOnUser > 0;
+                    bool isEverComplete = false;
+
+                    if (db.Challenges.Find(selectedChallenge.Id).Creator==user)
+                    {
+                        isCreatedByUser = true;
+                    }
+                    foreach (var ch in user.UserChallenge)
+                    {
+                        if (challenge.Id == ch.ChallengeId)
+                        {
+                            isEverComplete = true;
+                        }
+                    }
+                    if (isUserHaveAnyActive)
+                    {
+                        MessageBox.Show("У Вас уже есть активный вызов", "Ошибка");
+                        DataGridChallenges.SelectedItem = null;
+                    } else
+                    if (isEverComplete)
+                    {
+                        MessageBox.Show("Вы уже выполняли данный вызов!", "Упс..");
+                        DataGridChallenges.SelectedItem = null;
+                    } else
+                    if (isCreatedByUser)
+                    {
+                        MessageBox.Show("Вы не можете принять созданый Вами вызов", "Ошибка");
+                        DataGridChallenges.SelectedItem = null;
+                    }
+                    else
+                    {
+                        UserChallenge userChallenge = new UserChallenge() { User = user, Challenge = challenge, AcceptTime=DateTime.Now };
+                        db.UserChallenges.Add(userChallenge);
+                        db.SaveChanges();
+                        MessageBox.Show("Отлично! Вызов добавлен", "Успех");
+                        DataGridChallenges.SelectedItem = null;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Сначала нужно выбрать вызов", "Ошибка");
+            }
+        }
     }
 }

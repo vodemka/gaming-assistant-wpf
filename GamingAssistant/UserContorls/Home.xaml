@@ -32,6 +32,7 @@
                 <Button Content="МОИ ИГРЫ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="RefreshUserGames_Click"/>
                 <Button Content="ОСТАВИТЬ ОТЗЫВ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="LeaveComment_Click"/>
                 <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="ChangeUserButton_Click"/>
+                <Button Content="ПРИНЯТЫЙ ВЫЗОВ" Width="205" Margin="0 5 0 0" Foreground="White" Background="OrangeRed" Click="OpenChallengeWindow_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">

@@ -49,9 +49,9 @@ namespace GamingAssistant
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             homeWindow.hideAllRectangle.Opacity = 0;
             homeWindow.DataGridUserGames.Opacity = 1;
+            Close();
         }
 
         private void SendButton_Click(object sender, RoutedEventArgs e)

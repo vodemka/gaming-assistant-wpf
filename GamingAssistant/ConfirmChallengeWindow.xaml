@@ -1,0 +1,41 @@
+﻿<Window x:Class="GamingAssistant.ConfirmChallengeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GamingAssistant"
+        mc:Ignorable="d"
+        Title="ConfirmChallengeWindow" Height="240" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1">
+        <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="activeChallengeTitle" FontSize="30" Content="TITLE" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0" FontWeight="Bold"/>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="activeChallengeText" Text="Задание" FontSize="20" Margin="10 0 5 10" TextWrapping="Wrap"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Дата принятия:" FontSize="20" Margin="10 0 5 10"></TextBlock>
+                    <TextBlock x:Name="activeChallengeDate" Text="Дата принятия" FontSize="20" Margin="10 0 5 10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Дата выполнения:" FontSize="20" Margin="10 0 5 10"></TextBlock>
+                    <TextBlock x:Name="activeChallengeConfirmDate" Text="Дата подтверждения" FontSize="20" Margin="10 0 5 15"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 0">
+                    <Button Content="Подтвердить выполнение"  Width="210" Margin="5 0 5 5" Background="MediumSeaGreen" Click="ConfirmChallenge_Click">
+                        <Button.BorderBrush>MediumSeaGreen</Button.BorderBrush>
+                    </Button>
+                    <Button Content="Закрыть" Background="IndianRed" Width="210" Margin="5 0 5 5" Click="ExitButton_Click">
+                        <Button.BorderBrush>IndianRed</Button.BorderBrush>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
