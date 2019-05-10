@@ -19,7 +19,8 @@
         <Rectangle x:Name="hideGamesRectangle" Width="1080" Height="550" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"></Rectangle>
         <ScrollViewer>
             <StackPanel>
-                <TextBlock Text="Games" Margin="10" FontSize="22" FontWeight="Medium"/>
+                <TextBlock Text="Библиотека игр" Margin="15 20 0 0" FontSize="22" FontWeight="Medium"/>
+                <!--<Button Width="150" Content="Добавить игру"/>-->
                 <StackPanel Margin="20 0">
                     <ItemsControl x:Name="ListViewGames" ItemsSource="{Binding Game}">
                         <ItemsControl.ItemTemplate>

@@ -10,38 +10,40 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None" BorderBrush="Red">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        
-        <Button Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="18" Width="18" BorderThickness="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Padding="0" Margin="0 2 2 0" Click="ExitButton_Click">
-            <materialDesign:PackIcon Kind="WindowClose" Height="18" Width="18"/>
-        </Button>
-        <Label Grid.Row="0" Content="Регистрация" FontSize="25" FontFamily="Century Gothic" HorizontalAlignment="Center"/>
-        
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15 20 5 0">
-            <materialDesign:PackIcon  Grid.Row="1" Kind="AccountBox"  Height="30" Width="30" Margin="0 0 5 0"/>
-            <TextBox  x:Name="regLoginTextBox"  materialDesign:HintAssist.Hint="Логин" Height="30"  Width="233" FontSize="13"/>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="15 20 5 0">
-            <materialDesign:PackIcon Kind="Key" Height="30" Width="30" Margin="0 0 5 0" />
-            <PasswordBox  x:Name="regPasswordBox"  materialDesign:HintAssist.Hint="Пароль" Height="30" Width="233" FontSize="13"/>
-        </StackPanel>
-        <StackPanel Grid.Row="3"  Orientation="Horizontal" Margin="15 20 5 0">
-            <materialDesign:PackIcon Kind="ShieldKey" Height="30" Width="30" Margin="0 0 5 0"/>
-            <PasswordBox  x:Name="regConfirmPasswordBox"  materialDesign:HintAssist.Hint="Подтверждение" Height="30"  Width="233" FontSize="13"/>
-        </StackPanel>
-        <Button Grid.Row="4" x:Name="RegisterButton" Content="Зарегистрироваться" Width="200" ToolTip="Нажмите после заполнения всех полей" Click="RegisterButton_Click" Margin="15 20 5 0"/>
-        
-        <StackPanel Grid.Row="5" Margin="20 17 10 0">
-            <TextBlock Text="Уже зарегистрированы?" FontSize="15" FontFamily="Century Gothic" FontStyle="Italic" HorizontalAlignment="Center"/> 
-            <Button Content="Войти в аккаунт" Width="200" Margin="0 4 0 0" Click="LoginButton_Click"/>
-        </StackPanel>
-    </Grid>
+    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1">
+        <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown" KeyUp="Grid_KeyUp">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="18" Width="18" BorderThickness="0" materialDesign:ShadowAssist.ShadowDepth="Depth0" Padding="0" Margin="0 2 2 0" Click="ExitButton_Click">
+                <materialDesign:PackIcon Kind="WindowClose" Height="18" Width="18"/>
+            </Button>
+            <Label Grid.Row="0" Content="Регистрация" FontSize="25" FontFamily="Century Gothic" HorizontalAlignment="Center"/>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15 20 5 0">
+                <materialDesign:PackIcon  Grid.Row="1" Kind="AccountBox"  Height="30" Width="30" Margin="0 0 5 0"/>
+                <TextBox  x:Name="regLoginTextBox"  materialDesign:HintAssist.Hint="Логин" Height="30"  Width="233" FontSize="13"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="15 20 5 0">
+                <materialDesign:PackIcon Kind="Key" Height="30" Width="30" Margin="0 0 5 0" />
+                <PasswordBox  x:Name="regPasswordBox"  materialDesign:HintAssist.Hint="Пароль" Height="30" Width="233" FontSize="13"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3"  Orientation="Horizontal" Margin="15 20 5 0">
+                <materialDesign:PackIcon Kind="ShieldKey" Height="30" Width="30" Margin="0 0 5 0"/>
+                <PasswordBox  x:Name="regConfirmPasswordBox"  materialDesign:HintAssist.Hint="Подтверждение" Height="30"  Width="233" FontSize="13"/>
+            </StackPanel>
+            <Button Grid.Row="4" x:Name="RegisterButton" Content="Зарегистрироваться" Width="200" ToolTip="Нажмите после заполнения всех полей" Click="RegisterButton_Click" Margin="15 20 5 0"/>
+
+            <StackPanel Grid.Row="5" Margin="20 17 10 0">
+                <TextBlock Text="Уже зарегистрированы?" FontSize="15" FontFamily="Century Gothic" FontStyle="Italic" HorizontalAlignment="Center"/>
+                <Button Content="Войти в аккаунт" Width="200" Margin="0 4 0 0" Click="LoginButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

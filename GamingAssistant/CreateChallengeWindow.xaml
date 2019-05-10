@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:GamingAssistant"
         mc:Ignorable="d"
         Title="CreateChallengeWindow" Height="249" Width="429" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid>
+    <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
         <GroupBox Header="Challenge" FontSize="20"/>
         <StackPanel Margin="3 50 3 3">
             <TextBox x:Name="titleOfCreatedChallenge" materialDesign:HintAssist.Hint="Заголовок" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"></TextBox>

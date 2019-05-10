@@ -19,11 +19,11 @@ namespace GamingAssistant.Models.ComponentsModel
         public int? GameId { get; set; }
 
         public int CountOfComplete { get; set; }
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<UserChallenge> UserChallenge { get; set; }
 
         public Challenge()
         {
-            Users = new List<User>();
+            UserChallenge = new List<UserChallenge>(); 
         }
 
         public override string ToString()

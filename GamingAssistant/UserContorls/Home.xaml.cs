@@ -83,8 +83,6 @@ namespace GamingAssistant.UserContorls
 
         private void GoToChallenges_Click(object sender, RoutedEventArgs e)
         {
-            //HomeWindow current = new HomeWindow();
-            //current.NavigationMenu.SelectedIndex = 1;
             HomeWindow parentWindow = (HomeWindow)Window.GetWindow((DependencyObject)sender);
             if (parentWindow != null)
             {
@@ -102,7 +100,23 @@ namespace GamingAssistant.UserContorls
 
         private void DeleteGame_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DataGridUserGames.SelectedItem != null)
+            {
+                Game selectedGame = (Game)DataGridUserGames.SelectedItem;
+                using (AppDbContext db = new AppDbContext())
+                {
+                    db.Games.Load();
+                    Game game = db.Games.Find(selectedGame.Id);
+                    User user = db.Users.Find(App.CurrentUser.Id);
+                    user.Games.Remove(game);
+                    db.SaveChanges();
+                    ShowUserGames();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Сначала нужно выбрать игру", "Ошибка");
+            }
         }
     }
 }

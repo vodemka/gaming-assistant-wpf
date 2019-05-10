@@ -34,6 +34,7 @@ namespace GamingAssistant
         {
             Register();
         }
+
         private void Register()
         {
             try
@@ -113,6 +114,19 @@ namespace GamingAssistant
             Loader loader = new Loader();
             loader.ShowDialog();
             loader.Close();
+        }
+
+        private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Register();
+            }
         }
     }
 }

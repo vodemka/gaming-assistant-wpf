@@ -10,24 +10,36 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None">
-    <Grid>
-        <Label x:Name="currentGameLabel" FontSize="16" Content="GAME" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0"/>
-        <ListView x:Name="listOfComments" Width="750" Height="400" ScrollViewer.VerticalScrollBarVisibility="Auto">
-        <!--<TreeView x:Name="listOfComments" MinWidth="220">
-            --><!--<TreeViewItem Header="Fruit">
-               
-                --><!--<TreeViewItem Header="Banana" />
-                <TreeViewItem Header="Grape"/>
-                <TreeViewItem Header="Peach" />
-                <TreeViewItem Header="Pear" />
-                <TreeViewItem Header="Strawberry" />--><!--
-            </TreeViewItem>--><!--
-        </TreeView>-->
-
-        </ListView>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="buttonAdd" Width="110" Content="Add" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="AddButton_Click"/>
-            <Button Width="110" Content="Close" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="ExitButton_Click"/>
-        </StackPanel>
-    </Grid>
+    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1">
+        <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
+            <Label x:Name="currentGameLabel" FontSize="30" Content="GAME" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0" FontWeight="Bold"/>
+            <TextBlock x:Name="CommentsTextBlock"  Text="Отзывы" Margin="40 50 30 50" FontSize="22" FontWeight="Medium"/>
+            <ScrollViewer x:Name="CommentsScrollViewer" Width="770" Height="370" Margin="0 35 0 0">
+                <StackPanel Margin="10 10 0 10" Orientation="Vertical">
+                    <StackPanel Margin="5 0 0 0">
+                        <ItemsControl x:Name="listOfComments">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="10 0 10 10" VerticalAlignment="Top"
+                                             MinHeight="100" Width="700" Text="{Binding Text}" FontSize="18" AcceptsReturn="True" TextWrapping="Wrap"                 
+                                             VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="{Binding User.Username}" materialDesign:HintAssist.Foreground="Black"
+                                             IsReadOnly="True" FontFamily="Century Gothic"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="buttonAdd" Width="180" Content="Добавить к себе" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="AddButton_Click"/>
+                <Button Width="180" Content="Закрыть" VerticalAlignment="Bottom" Margin="4 0 4 5" Click="ExitButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

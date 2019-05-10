@@ -25,13 +25,13 @@
         </Grid.ColumnDefinitions>
         <Rectangle x:Name="hideAllRectangle" Width="1080" Height="490" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"></Rectangle>
         <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Background="{DynamicResource PrimaryHueMidBrush}">
-            <materialDesign:Chip x:Name="userInfoChip" Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top"/>
-            <Image Source="/Resources/Icons/user.png" Height="50" Width="50" HorizontalAlignment="Left" Margin="8 12 0 8"></Image>
+            <materialDesign:Chip x:Name="userInfoChip" Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <materialDesign:PackIcon Kind="GamepadVariant" Width="50" Foreground="{DynamicResource MaterialDesignPaper}" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
             <StackPanel>
-                <Button Content="ВЫЗОВЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}" Click="GoToChallenges_Click"/>
-                <Button Content="МОИ ИГРЫ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}" Click="RefreshUserGames_Click"/>
-                <Button Content="ОСТАВИТЬ ОТЗЫВ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}"/>
-                <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="White" Style="{DynamicResource MaterialDesignFlatButton}" Click="ChangeUserButton_Click"/>
+                <Button Content="ВЫЗОВЫ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="GoToChallenges_Click"/>
+                <Button Content="МОИ ИГРЫ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="RefreshUserGames_Click"/>
+                <Button Content="ОСТАВИТЬ ОТЗЫВ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="LeaveComment_Click"/>
+                <Button Content="СМЕНИТЬ АККАУНТ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="ChangeUserButton_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">
@@ -43,12 +43,12 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Width="150" Content="Оставить отзыв" Margin="10 0 0 0" Click="LeaveComment_Click"/>
-                <Button Width="100" Content="Удалить" Margin="10 0 0 0" Click="DeleteGame_Click"/>
+                <Button Width="100" Content="Удалить" Margin="10 0 0 0" Click="DeleteGame_Click" Background="OrangeRed">
+                    <Button.BorderBrush>OrangeRed</Button.BorderBrush>
+                </Button>
             </StackPanel>
-            <!--<materialDesign:Card Padding="13" Margin="10">
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ВАШИ ДОСТИЖЕНИЯ:</TextBlock>
-            </materialDesign:Card>-->
-            <DataGrid x:Name="DataGridUserGames" FontSize="14" Margin="0 5 0 0" MaxHeight="370" IsReadOnly="True" CanUserSortColumns="True"  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            
+            <DataGrid x:Name="DataGridUserGames" FontSize="14" Margin="0 5 0 0" MaxHeight="400" IsReadOnly="True" CanUserSortColumns="True"  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Лого" Width="Auto">
                         <DataGridTemplateColumn.CellTemplate>
@@ -65,7 +65,6 @@
                     <DataGridTextColumn Binding="{Binding Rating}" Header="Рейтинг" Width="380"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <!--<ProgressBar Value="75" Height="10" Margin="10"/>-->
         </StackPanel>
         <materialDesign:MaterialDateDisplay IsEnabled="True" Margin="8" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
     </Grid>

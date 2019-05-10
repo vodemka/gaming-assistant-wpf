@@ -20,12 +20,12 @@ namespace GamingAssistant
 
         public bool IsAdmin { get; set; }
 
-        public virtual ICollection<Challenge> Challenges { get; set; }
         public virtual ICollection<Game> Games { get; set; }
+        public virtual ICollection<UserChallenge> UserChallenge { get; set; }
         public User()
         {
-            Challenges = new List<Challenge>();
             Games = new List<Game>();
+            UserChallenge = new List<UserChallenge>();
         }
     }
 }

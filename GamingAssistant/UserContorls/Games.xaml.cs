@@ -91,6 +91,22 @@ namespace GamingAssistant.UserContorls
                     comments.Add(comment);
                 }
                 gameWindow.listOfComments.ItemsSource = comments;
+                List<User> listOfUsers = new List<User>();
+                foreach (var comment in comments)
+                {
+                    listOfUsers.Add(comment.User);
+                }
+                if (comments.Count() == 0) { gameWindow.CommentsTextBlock.Text = "Отзывы отсутвуют"; gameWindow.CommentsScrollViewer.Visibility = Visibility.Hidden; }
+                else
+                {
+                    gameWindow.CommentsTextBlock.Text = "Отзывы"; gameWindow.CommentsScrollViewer.Visibility = Visibility.Visible;
+                }
+                User user = db.Users.Find(App.CurrentUser.Id);
+                bool isItUserGame = user.Games.Contains(selGame);
+                if (isItUserGame)
+                {
+                    gameWindow.buttonAdd.IsEnabled = false;
+                }
             }
 
             hideGamesRectangle.Opacity = 0.4;

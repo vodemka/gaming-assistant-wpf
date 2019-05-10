@@ -70,5 +70,10 @@ namespace GamingAssistant
                 db.SaveChanges();
             }
         }
+
+        private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

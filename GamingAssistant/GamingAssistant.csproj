@@ -111,10 +111,10 @@
     <Compile Include="Loader.xaml.cs">
       <DependentUpon>Loader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ComponentsModel\AcceptedChallenge.cs" />
     <Compile Include="Models\ComponentsModel\Challenge.cs" />
     <Compile Include="Models\ComponentsModel\Comment.cs" />
     <Compile Include="Models\ComponentsModel\Game.cs" />
+    <Compile Include="Models\ComponentsModel\UserChallenge.cs" />
     <Compile Include="OpenGameWindow.xaml.cs">
       <DependentUpon>OpenGameWindow.xaml</DependentUpon>
     </Compile>

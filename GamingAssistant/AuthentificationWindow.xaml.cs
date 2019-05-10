@@ -112,21 +112,18 @@ namespace GamingAssistant
         {
             Authentification();
         }
+
+        private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Grid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Authentification();
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Selphinio - petr2019
-//Vadimka - vadimka2000

@@ -67,6 +67,12 @@ namespace GamingAssistant
                 db.SaveChanges();
             }
             MessageBox.Show("Комментарий отправлен!", "Успешно");
+            textOfComment.Text = String.Empty;
+        }
+
+        private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }   
 }

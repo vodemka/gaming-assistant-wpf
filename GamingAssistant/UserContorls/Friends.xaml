@@ -18,7 +18,7 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Friends" Margin="10" FontSize="22" FontWeight="Medium"/>
-                    <Button Width="70" Content="Add"/>
+                    <Button Width="150" Content="Добавить друзей"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

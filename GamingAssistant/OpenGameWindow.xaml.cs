@@ -75,5 +75,10 @@ namespace GamingAssistant
                 }
             }
         }
+
+        private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }
