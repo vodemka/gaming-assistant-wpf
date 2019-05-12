@@ -1,0 +1,35 @@
+﻿<Window x:Class="GamingAssistant.AddNewGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GamingAssistant"
+        mc:Ignorable="d"
+        Title="AddNewGameWindow" Height="350" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1">
+        <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
+            <StackPanel>
+                <StackPanel>
+                    <Label Content="Добавление игры" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center"></Label>
+                </StackPanel>
+
+                <StackPanel Margin="5 10 5 0">
+                    <Image Source="/Resources/GamesImages/default.jpg" Width="120" Height="120"></Image>
+                    <TextBox x:Name="nameOfGame" Width="500" Height="30" materialDesign:HintAssist.Hint="Введите название игры (минимум 2, максимум 20 символов)"  ToolTip="Поле для ввода названия игры" BorderBrush="Black" Margin="0 10 0 0"/>
+                    <materialDesign:RatingBar x:Name="ratingOfGame" Width="130" Value="0" Margin="0 4 0 0"></materialDesign:RatingBar>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="buttonAdd" Width="110" Content="Добавить" VerticalAlignment="Bottom" Margin="4 25 4 5" Click="AddGameButton_Click" ToolTip="Нажмите, чтобы добавить игру"/>
+                    <Button Width="110" Content="Отмена" VerticalAlignment="Bottom" Margin="4 0 4 5" Background="OrangeRed" ToolTip="Нажмите, если передумали добавлять игру" Click="ExitButton_Click">
+                        <Button.BorderBrush>OrangeRed</Button.BorderBrush>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

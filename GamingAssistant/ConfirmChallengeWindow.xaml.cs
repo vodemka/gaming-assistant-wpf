@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Windows.Navigation;
 
 namespace GamingAssistant
 {
@@ -37,11 +39,15 @@ namespace GamingAssistant
             string Title = "", Text = "";
             string DateOfAccept = "";
             string DateOfConfirm = "";
+            string ProofLink = "";
+            bool flag = true;
+            
             using (AppDbContext db = new AppDbContext())
             {
                 UserChallenge uch2 = db.UserChallenges.Find(uch.Id);
                 Challenge ch = db.Challenges.Find(uch2.Challenge.Id);
                 Game game = db.Games.Find(ch.Game.Id);
+                ProofLink = uch2.ProofLink;
                 Title = ch.Title;
                 Text = ch.Text;
                 if (uch2.AcceptTime != null)
@@ -50,23 +56,38 @@ namespace GamingAssistant
                 }
                 else
                 {
-                    DateOfAccept = "None";
+                    DateOfAccept = "--";
                 }
 
                 if (uch2.ConfirmTime != null)
                 {
-                    DateOfConfirm = uch.ConfirmTime.ToString();
+                    DateOfConfirm = uch2.ConfirmTime.ToString();
+                }
+                else
+                {
+                    DateOfConfirm = "--";
+                }
+
+                if (uch2.ProofLink == null)
+                {
+                    var x = activeChallengeProofLink.Inlines.FirstInline.TextDecorations = TextDecorations.Strikethrough;
+                    activeChallengeProofLink.Inlines.FirstInline.ToolTip = "Скриншот еще не загружен";
+                    flag = false;
                 }
             }
             activeChallengeTitle.Content = Title;
             activeChallengeText.Text = Text;
             activeChallengeDate.Text = DateOfAccept;
             activeChallengeConfirmDate.Text = DateOfConfirm;
+            if (flag)
+            {
+                activeChallengeProofLink.NavigateUri = new Uri(ProofLink);
+            }
         }
 
         private void ConfirmChallenge_Click(object sender, RoutedEventArgs e)
         {
-            bool flag = true, flagIsOwner = true;
+            bool flag = true, flagIsOwner = true, flagIsReady = true;
             using (AppDbContext db = new AppDbContext())
             {
                 UserChallenge userChallenge = db.UserChallenges.Find(uch.Id);
@@ -74,6 +95,8 @@ namespace GamingAssistant
 
                 User user = db.Users.Find(App.CurrentUser.Id);
                 if (user.Id == userChallenge.UserId) { flagIsOwner = false; }
+
+                flagIsReady = userChallenge.IsUserReady;
             }
 
             if (!flag)
@@ -85,6 +108,12 @@ namespace GamingAssistant
             if (!flagIsOwner)
             {
                 MessageBox.Show("Вы не можете подтвердить свой же вызов", "Упс..");
+            }
+            else
+
+            if (!flagIsReady)
+            {
+                MessageBox.Show("Пользователь еще выполняет этот вызов");
             }
             else
             {
@@ -99,6 +128,7 @@ namespace GamingAssistant
                     db.SaveChanges();
                 }
                 MessageBox.Show("Вы подтвердили вызов, спасибо!", "Отлично");
+                activeChallenges.ShowActiveChallenges();
             }
         }
 
@@ -110,6 +140,12 @@ namespace GamingAssistant
         private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
     }
 }

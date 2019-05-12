@@ -26,14 +26,9 @@ namespace GamingAssistant.UserContorls
         public ObservableCollection<Game> games;
         public Games()
         {
-            using (AppDbContext db = new AppDbContext())
-            {
-                InitializeComponent();
-                games = new ObservableCollection<Game>();
-                //InitGames();
-                db.Games.Load();
-                ListViewGames.ItemsSource = db.Games.Local;
-            }
+            InitializeComponent();
+            games = new ObservableCollection<Game>();
+            ShowGames();
         }
 
         private void InitGames()
@@ -84,23 +79,25 @@ namespace GamingAssistant.UserContorls
             using (AppDbContext db = new AppDbContext())
             {
                 db.Games.Load();
+                db.Users.Load();
                 Game selGame = db.Games.Find(game.Id);
+
                 List<Comment> comments = new List<Comment>();
                 foreach (var comment in selGame.Comments)
                 {
                     comments.Add(comment);
                 }
                 gameWindow.listOfComments.ItemsSource = comments;
-                List<User> listOfUsers = new List<User>();
-                foreach (var comment in comments)
+
+                if (comments.Count() == 0)
                 {
-                    listOfUsers.Add(comment.User);
+                    gameWindow.CommentsTextBlock.Text = "Отзывы отсутвуют"; gameWindow.CommentsScrollViewer.Visibility = Visibility.Hidden;
                 }
-                if (comments.Count() == 0) { gameWindow.CommentsTextBlock.Text = "Отзывы отсутвуют"; gameWindow.CommentsScrollViewer.Visibility = Visibility.Hidden; }
                 else
                 {
                     gameWindow.CommentsTextBlock.Text = "Отзывы"; gameWindow.CommentsScrollViewer.Visibility = Visibility.Visible;
                 }
+
                 User user = db.Users.Find(App.CurrentUser.Id);
                 bool isItUserGame = user.Games.Contains(selGame);
                 if (isItUserGame)
@@ -113,6 +110,24 @@ namespace GamingAssistant.UserContorls
             ListViewGames.Opacity = 0.6;
             gameWindow.ShowDialog();
             
+        }
+
+        private void AddNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewGameWindow addNewGameWindow = new AddNewGameWindow(this);
+            hideGamesRectangle.Opacity = 0.4;
+            ListViewGames.Opacity = 0.6;
+            addNewGameWindow.ShowDialog();
+        }
+
+        public void ShowGames()
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                //InitGames();
+                db.Games.Load();
+                ListViewGames.ItemsSource = db.Games.Local;
+            }
         }
     }
 }

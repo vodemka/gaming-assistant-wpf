@@ -19,7 +19,7 @@
             
             <StackPanel Margin="5 10 5 0">
                 <ComboBox x:Name="ComboBoxGames" Width="300"></ComboBox>
-                    <TextBox x:Name="textOfComment" Width="400" Height="200" materialDesign:HintAssist.Hint="Введите текст вашего отзыва"  ToolTip="Поле для ввода текста Вашего отзыва" BorderBrush="Black" TextWrapping="Wrap"
+                    <TextBox x:Name="textOfComment" Width="400" Height="200" materialDesign:HintAssist.Hint="Введите текст вашего отзыва (минимум 10 символов)"  ToolTip="Поле для ввода текста Вашего отзыва" BorderBrush="Black" TextWrapping="Wrap"
                          Margin="0 10 0 0"
                         VerticalAlignment="Stretch"
                         MinWidth="280"

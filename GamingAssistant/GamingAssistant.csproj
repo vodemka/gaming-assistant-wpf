@@ -98,6 +98,9 @@
     <Compile Include="AcceptedChallengeWindow.xaml.cs">
       <DependentUpon>AcceptedChallengeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddNewGameWindow.xaml.cs">
+      <DependentUpon>AddNewGameWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="AuthentificationWindow.xaml.cs">
       <DependentUpon>AuthentificationWindow.xaml</DependentUpon>
@@ -142,6 +145,10 @@
     </Compile>
     <Compile Include="Validation.cs" />
     <Page Include="AcceptedChallengeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewGameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -56,18 +56,31 @@ namespace GamingAssistant
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
-            using (AppDbContext db = new AppDbContext())
+            if (textOfComment.Text == String.Empty)
             {
-                db.Games.Load();
-                db.Users.Load();
-                Game selectedgame = db.Games.Local.Single(p => p.Name.Equals(ComboBoxGames.SelectedItem.ToString()));
-                User selectedUser = db.Users.Local.Single(p => p.Id.Equals(App.CurrentUser.Id));
-                Comment createdComment = new Comment { Text = textOfComment.Text, User = selectedUser, Game = selectedgame };
-                db.Comments.Add(createdComment);
-                db.SaveChanges();
+                MessageBox.Show("Отзыв не может быть пустым", "Упс..");
+                textOfComment.BorderBrush = new SolidColorBrush(Colors.Red);
             }
-            MessageBox.Show("Комментарий отправлен!", "Успешно");
-            textOfComment.Text = String.Empty;
+            else if (textOfComment.Text.Length < 10)
+            {
+                MessageBox.Show("Отзыв слишком короткий. Минимальная длина 10 символов", "Упс..");
+            }
+            else
+            {
+                textOfComment.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
+                using (AppDbContext db = new AppDbContext())
+                {
+                    db.Games.Load();
+                    db.Users.Load();
+                    Game selectedgame = db.Games.Local.Single(p => p.Name.Equals(ComboBoxGames.SelectedItem.ToString()));
+                    User selectedUser = db.Users.Local.Single(p => p.Id.Equals(App.CurrentUser.Id));
+                    Comment createdComment = new Comment { Text = textOfComment.Text, User = selectedUser, Game = selectedgame };
+                    db.Comments.Add(createdComment);
+                    db.SaveChanges();
+                }
+                MessageBox.Show("Комментарий отправлен!", "Успешно");
+                textOfComment.Text = String.Empty;
+            }
         }
 
         private void RangeDragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

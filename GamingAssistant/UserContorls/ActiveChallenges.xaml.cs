@@ -30,7 +30,7 @@ namespace GamingAssistant.UserContorls
             ShowActiveChallenges();
         }
 
-        private void ShowActiveChallenges()
+        public void ShowActiveChallenges()
         {
             listOfActiveChallenges.ItemsSource = null;
             using (AppDbContext db = new AppDbContext())

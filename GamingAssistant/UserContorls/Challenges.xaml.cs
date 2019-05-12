@@ -29,7 +29,6 @@ namespace GamingAssistant.UserContorls
             using (AppDbContext db = new AppDbContext())
             {
                 InitializeComponent();
-                //InitChallenges();
                 challenges = new ObservableCollection<Challenge>(); 
                 db.Users.Load();
                 db.Games.Load();
@@ -41,17 +40,7 @@ namespace GamingAssistant.UserContorls
                 DataGridChallenges.ItemsSource = challenges;
             }
         }
-        private void InitChallenges()
-        {
-            using (AppDbContext db = new AppDbContext())
-            {
-                User user2 = new User() { Username = "vdfs", Hash = "fdfd", Salt = "fdfsww" };
-                Challenge ch2 = new Challenge() { Title = "Test2", Text = "Test text of the challenge", Creator = user2 };
-                db.Challenges.Add(ch2);
-                db.Entry(ch2).State = EntityState.Detached;
-                db.SaveChanges();
-            }
-        }
+       
         //private ObservableCollection<Challenge> GetChallenges()
         //{
         //    return new ObservableCollection<Challenge>()
@@ -123,6 +112,22 @@ namespace GamingAssistant.UserContorls
             else
             {
                 MessageBox.Show("Сначала нужно выбрать вызов", "Ошибка");
+            }
+        }
+
+        private void RefreshChallengesClick(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                challenges = new ObservableCollection<Challenge>();
+                db.Users.Load();
+                db.Games.Load();
+                db.Challenges.Load();
+                foreach (var challenge in db.Challenges)
+                {
+                    challenges.Add(challenge);
+                }
+                DataGridChallenges.ItemsSource = challenges;
             }
         }
     }
