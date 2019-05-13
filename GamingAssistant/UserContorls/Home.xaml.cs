@@ -90,6 +90,15 @@ namespace GamingAssistant.UserContorls
             }
         }
 
+        private void GoToNotes_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow parentWindow = (HomeWindow)Window.GetWindow((DependencyObject)sender);
+            if (parentWindow != null)
+            {
+                parentWindow.NavigationMenu.SelectedIndex = 4;
+            }
+        }
+
         private void LeaveComment_Click(object sender, RoutedEventArgs e)
         {
             LeaveCommentWindow leaveCommentWindow = new LeaveCommentWindow(this);

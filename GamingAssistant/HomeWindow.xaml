@@ -45,6 +45,9 @@
                 <TabItem Header="CHALLENGES" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <uc:Challenges/>
                 </TabItem>
+                <TabItem Header="NOTES" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <uc:Notes/>
+                </TabItem>
             </dragablz:TabablzControl>
         </Grid>
     </Grid>

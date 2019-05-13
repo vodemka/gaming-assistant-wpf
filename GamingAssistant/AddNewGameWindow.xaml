@@ -19,7 +19,7 @@
 
                 <StackPanel Margin="5 10 5 0">
                     <Image Source="/Resources/GamesImages/default.jpg" Width="120" Height="120"></Image>
-                    <TextBox x:Name="nameOfGame" Width="500" Height="30" materialDesign:HintAssist.Hint="Введите название игры (минимум 2, максимум 20 символов)"  ToolTip="Поле для ввода названия игры" BorderBrush="Black" Margin="0 10 0 0"/>
+                    <TextBox x:Name="nameOfGame" Width="500" Height="30" materialDesign:HintAssist.Hint="Введите название игры (минимум 2, максимум 20 символов)" MaxLength="20" ToolTip="Поле для ввода названия игры" BorderBrush="Black" Margin="0 10 0 0"/>
                     <materialDesign:RatingBar x:Name="ratingOfGame" Width="130" Value="0" Margin="0 4 0 0"></materialDesign:RatingBar>
                 </StackPanel>
 

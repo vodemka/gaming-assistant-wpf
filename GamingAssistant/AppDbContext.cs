@@ -18,6 +18,7 @@ namespace GamingAssistant
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Challenge> Challenges { get; set; }
         public virtual DbSet<UserChallenge> UserChallenges { get; set; }
+        public virtual DbSet<Note> Notes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         { }

@@ -22,10 +22,12 @@ namespace GamingAssistant
 
         public virtual ICollection<Game> Games { get; set; }
         public virtual ICollection<UserChallenge> UserChallenge { get; set; }
+        public virtual ICollection<Note> Notes { get; set; }
         public User()
         {
             Games = new List<Game>();
             UserChallenge = new List<UserChallenge>();
+            Notes = new List<Note>();
         }
     }
 }

@@ -101,6 +101,9 @@
     <Compile Include="AddNewGameWindow.xaml.cs">
       <DependentUpon>AddNewGameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddNewNoteWindow.xaml.cs">
+      <DependentUpon>AddNewNoteWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="AuthentificationWindow.xaml.cs">
       <DependentUpon>AuthentificationWindow.xaml</DependentUpon>
@@ -123,6 +126,7 @@
     <Compile Include="Models\ComponentsModel\Challenge.cs" />
     <Compile Include="Models\ComponentsModel\Comment.cs" />
     <Compile Include="Models\ComponentsModel\Game.cs" />
+    <Compile Include="Models\ComponentsModel\Note.cs" />
     <Compile Include="Models\ComponentsModel\UserChallenge.cs" />
     <Compile Include="OpenGameWindow.xaml.cs">
       <DependentUpon>OpenGameWindow.xaml</DependentUpon>
@@ -143,12 +147,19 @@
     <Compile Include="UserContorls\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserContorls\Notes.xaml.cs">
+      <DependentUpon>Notes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Validation.cs" />
     <Page Include="AcceptedChallengeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddNewGameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewNoteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,6 +220,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserContorls\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserContorls\Notes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

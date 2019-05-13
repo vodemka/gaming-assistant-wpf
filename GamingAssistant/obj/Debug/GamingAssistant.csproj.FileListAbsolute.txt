@@ -60,3 +60,7 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.baml

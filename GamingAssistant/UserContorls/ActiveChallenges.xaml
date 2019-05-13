@@ -16,26 +16,27 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <ScrollViewer>
-            <StackPanel Margin="0 5 0 0">
+            <StackPanel Margin="0 0 0 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Активные вызовы" Margin="10 10 0 0" FontSize="22" FontWeight="Medium"/>
-                    <Button VerticalAlignment="Center" HorizontalAlignment="Right" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" Click="RefreshUserChallenges_Click" Width="50" Height="50" Margin="-5 -1 0 0" ToolTip="Нажмите, чтобы обновить список вызовов">
+                    <Button Width="110" Margin="10 7 0 0" Content="Обновить" Click="RefreshUserChallenges_Click"/>
+                    <!--<Button VerticalAlignment="Center" HorizontalAlignment="Right" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" Click="RefreshUserChallenges_Click" Width="50" Height="50" Margin="-5 -1 0 0" ToolTip="Нажмите, чтобы обновить список вызовов">
                         <materialDesign:PackIcon Kind="Refresh"></materialDesign:PackIcon>
-                    </Button>
+                    </Button>-->
                 </StackPanel>
-                <ItemsControl x:Name="listOfActiveChallenges">
+                <ItemsControl x:Name="listOfActiveChallenges" Margin="0 7 0 0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border>
                                 <StackPanel>
-                                    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Margin="5 0 0 0" CornerRadius="3 3 3 3">
+                                    <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Margin="10 0 0 0" CornerRadius="3 3 3 3">
                                         <StackPanel Orientation="Horizontal">
                                             <Label Content="{Binding User.Username}" FontWeight="Bold" FontSize="16" VerticalAlignment="Top" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                                             <Label Content="выполняет:" FontWeight="Bold" FontSize="16"/>
                                             <TextBlock Text="{Binding Challenge.Text}" Margin="5 5 0 0" FontSize="16" TextWrapping="Wrap" MinHeight="30" Width="1000" VerticalAlignment="Top"/>
                                         </StackPanel>
                                     </Border>
-                                    <Button  Tag="{Binding}" Content="Подтвердить выполнение" Width="220" Background="OrangeRed" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5 3 0 7" Opacity="0.95" Click="ConfirmChallengeButton_Click">
+                                    <Button Tag="{Binding}" Content="Подтвердить выполнение" Width="220" Background="OrangeRed" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 3 0 7" Opacity="0.95" Click="ConfirmChallengeButton_Click">
                                         <Button.BorderBrush>OrangeRed</Button.BorderBrush>
                                     </Button>
                                 </StackPanel>
