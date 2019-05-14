@@ -40,17 +40,6 @@ namespace GamingAssistant.UserContorls
                 DataGridChallenges.ItemsSource = challenges;
             }
         }
-       
-        //private ObservableCollection<Challenge> GetChallenges()
-        //{
-        //    return new ObservableCollection<Challenge>()
-        //{
-        //new Challenge("Киллер", "Нужно убить 100 врагов в игре Fortnite", new User(){Username="Вадим"}, new Game("FORTNITE",5.0,"/Resources/GamesImages/fortnite.jpg")),
-        //new Challenge("Потрошитель", "Нужно убить 200 врагов в игре PUBG", new User(){Username="Никита"}, new Game("PUBG",5.0,"/Resources/GamesImages/pubg.jpeg")),
-        //new Challenge("Золотая лихорадка", "Нужно создать 32 золотых блока в игре Minecraft", new User(){Username="Вероника"}, new Game("MINECRAFT",5.0,"/Resources/GamesImages/minecraft.png")),
-        //new Challenge("Футболист", "Нужно забить 7 голов сопернику в игре Rocket League", new User(){Username="Саша"}, new Game("ROCKET LEAGUE",5.0,"/Resources/GamesImages/rocket.jpg")),
-        //    };
-        //}
 
         private void AddNewChallengeClick(object sender, RoutedEventArgs e)
         {

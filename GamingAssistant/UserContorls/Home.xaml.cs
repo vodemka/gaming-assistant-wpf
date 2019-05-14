@@ -99,6 +99,15 @@ namespace GamingAssistant.UserContorls
             }
         }
 
+        private void GoToComplited_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow parentWindow = (HomeWindow)Window.GetWindow((DependencyObject)sender);
+            if (parentWindow != null)
+            {
+                parentWindow.NavigationMenu.SelectedIndex = 5;
+            }
+        }
+
         private void LeaveComment_Click(object sender, RoutedEventArgs e)
         {
             LeaveCommentWindow leaveCommentWindow = new LeaveCommentWindow(this);
@@ -135,10 +144,6 @@ namespace GamingAssistant.UserContorls
             {
                 User tempUser = db.Users.Find(App.CurrentUser.Id);
                 if (tempUser.UserChallenge.Where(p=>p.IsCompleted == false).Count() == 0) { flag = false; }
-                //foreach (var ch in tempUser.UserChallenge)
-                //{
-                //    if (ch.IsCompleted) { flag = false; }
-                //}
             }
             if (!flag)
             {

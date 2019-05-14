@@ -141,6 +141,9 @@
     <Compile Include="UserContorls\ActiveChallenges.xaml.cs">
       <DependentUpon>ActiveChallenges.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserContorls\CompletedChallenges.xaml.cs">
+      <DependentUpon>CompletedChallenges.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserContorls\Games.xaml.cs">
       <DependentUpon>Games.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserContorls\ActiveChallenges.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserContorls\CompletedChallenges.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

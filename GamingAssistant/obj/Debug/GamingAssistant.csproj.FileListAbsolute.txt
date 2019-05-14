@@ -53,7 +53,6 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.baml
-D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.g.cs
@@ -64,3 +63,6 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache

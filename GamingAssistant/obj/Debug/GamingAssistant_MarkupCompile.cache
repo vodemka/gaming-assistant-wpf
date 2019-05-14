@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\App.xaml
-17349952788
+18-1104216571
 
-32-1665851343
+331594135469
 22128779150
-AcceptedChallengeWindow.xaml;AddNewGameWindow.xaml;AddNewNoteWindow.xaml;AuthentificationWindow.xaml;ConfirmChallengeWindow.xaml;CreateChallengeWindow.xaml;HomeWindow.xaml;LeaveCommentWindow.xaml;Loader.xaml;MainWindow.xaml;OpenGameWindow.xaml;RegisterWindow.xaml;UserContorls\Challenges.xaml;UserContorls\ActiveChallenges.xaml;UserContorls\Games.xaml;UserContorls\Home.xaml;UserContorls\Notes.xaml;
+AcceptedChallengeWindow.xaml;AddNewGameWindow.xaml;AddNewNoteWindow.xaml;AuthentificationWindow.xaml;ConfirmChallengeWindow.xaml;CreateChallengeWindow.xaml;HomeWindow.xaml;LeaveCommentWindow.xaml;Loader.xaml;MainWindow.xaml;OpenGameWindow.xaml;RegisterWindow.xaml;UserContorls\Challenges.xaml;UserContorls\ActiveChallenges.xaml;UserContorls\CompletedChallenges.xaml;UserContorls\Games.xaml;UserContorls\Home.xaml;UserContorls\Notes.xaml;
 
 False
 

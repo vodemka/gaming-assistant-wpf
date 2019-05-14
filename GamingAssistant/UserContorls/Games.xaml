@@ -13,8 +13,7 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"
-             >
+     FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <Rectangle x:Name="hideGamesRectangle" Width="1080" Height="550" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"></Rectangle>
         <ScrollViewer>

@@ -13,10 +13,8 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"
-             >
+     FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        <Rectangle x:Name="hideNotesRectangle" Width="1080" Height="550" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"></Rectangle>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Ваши заметки" Margin="10 10 0 0" FontSize="22" FontWeight="Medium"/>

@@ -23,7 +23,12 @@ namespace GamingAssistant.Models.ComponentsModel
 
         public UserChallenge()
         {
+           
+        }
 
+        public override string ToString()
+        {
+            return User.Username + " выполнил: " + Challenge.Text + " (" + ConfirmTime.ToString() + ")";
         }
     }
 }
