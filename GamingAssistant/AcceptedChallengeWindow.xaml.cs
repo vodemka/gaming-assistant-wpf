@@ -112,6 +112,10 @@ namespace GamingAssistant
                         uch.ProofLink = proofLinkTextBox.Text;
                         uch.IsUserReady = true;
                         db.Entry(uch).State = EntityState.Modified;
+
+                        User thiUser = db.Users.Find(App.CurrentUser.Id);
+                        Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " отправил подтверждение вызова: " + uch.Challenge.Text };
+                        db.Logs.Add(log);
                         db.SaveChanges();
                     }
                     MessageBox.Show("Вы отправили подтверждение на рассмотрение!", "Отлично");

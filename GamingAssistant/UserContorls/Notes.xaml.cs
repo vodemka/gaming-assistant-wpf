@@ -64,7 +64,7 @@ namespace GamingAssistant.UserContorls
                 db.Notes.Load();
                 db.Games.Load();
                 notes = db.Notes.Local.Where(p => p.UserId == App.CurrentUser.Id);
-                ListOfNotes.ItemsSource = notes;
+                ListOfNotes.ItemsSource = notes.Reverse();
             }
         }
 

@@ -76,6 +76,10 @@ namespace GamingAssistant
                     User selectedUser = db.Users.Local.Single(p => p.Id.Equals(App.CurrentUser.Id));
                     Comment createdComment = new Comment { Text = textOfComment.Text, User = selectedUser, Game = selectedgame };
                     db.Comments.Add(createdComment);
+
+                    User thiUser = db.Users.Find(App.CurrentUser.Id);
+                    Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " оставил комментарий: " + createdComment.Text + " к игре " + selectedgame.Name };
+                    db.Logs.Add(log);
                     db.SaveChanges();
                 }
                 MessageBox.Show("Комментарий отправлен!", "Успешно");

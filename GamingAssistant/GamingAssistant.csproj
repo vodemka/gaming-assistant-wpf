@@ -104,6 +104,9 @@
     <Compile Include="AddNewNoteWindow.xaml.cs">
       <DependentUpon>AddNewNoteWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="AuthentificationWindow.xaml.cs">
       <DependentUpon>AuthentificationWindow.xaml</DependentUpon>
@@ -126,6 +129,7 @@
     <Compile Include="Models\ComponentsModel\Challenge.cs" />
     <Compile Include="Models\ComponentsModel\Comment.cs" />
     <Compile Include="Models\ComponentsModel\Game.cs" />
+    <Compile Include="Models\ComponentsModel\Log.cs" />
     <Compile Include="Models\ComponentsModel\Note.cs" />
     <Compile Include="Models\ComponentsModel\UserChallenge.cs" />
     <Compile Include="OpenGameWindow.xaml.cs">
@@ -163,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddNewNoteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

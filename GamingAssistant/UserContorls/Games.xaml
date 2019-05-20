@@ -23,6 +23,8 @@
                     <Button Width="150" Content="Добавить игру" Margin="10 7 0 0" Background="OrangeRed" Click="AddNewGame_Click">
                         <Button.BorderBrush>OrangeRed</Button.BorderBrush>
                     </Button>
+                    <Button Width="150" Content="По рейтингу" Margin="10 7 0 0" Click="SortByRating_Click"/>
+                    <Button Width="150" Content="По названию" Margin="10 7 0 0" Click="SortByName_Click"/>
                 </StackPanel>
                 <StackPanel Margin="20 0">
                     <ItemsControl x:Name="ListViewGames" ItemsSource="{Binding Game}">

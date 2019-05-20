@@ -125,6 +125,10 @@ namespace GamingAssistant
                     Challenge currentChallenge = db.Challenges.Find(userChallenge.Challenge.Id);
                     currentChallenge.CountOfComplete++;
                     db.Entry(currentChallenge).State = EntityState.Modified;
+
+                    User thiUser = db.Users.Find(App.CurrentUser.Id);
+                    Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " подтвердил выполнение вызова игроком " + userChallenge.User.Username };
+                    db.Logs.Add(log);
                     db.SaveChanges();
                 }
                 MessageBox.Show("Вы подтвердили вызов, спасибо!", "Отлично");

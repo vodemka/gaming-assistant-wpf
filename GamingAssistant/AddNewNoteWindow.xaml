@@ -18,7 +18,7 @@
                 </StackPanel>
 
                 <StackPanel Margin="5 5 5 0">
-                    <TextBox x:Name="textOfNote" Width="500" Height="80" materialDesign:HintAssist.Hint="Введите заметку (максимум 60 символов)" MaxLength="60"  ToolTip="Поле для ввода названия игры" BorderBrush="Black" Margin="0 10 0 0" TextWrapping="Wrap" AcceptsReturn="True"/>
+                    <TextBox x:Name="textOfNote" Width="500" Height="80" materialDesign:HintAssist.Hint="Введите заметку (максимум 100 символов)" MaxLength="100"  ToolTip="Поле для ввода названия игры" BorderBrush="Black" Margin="0 10 0 0" TextWrapping="Wrap" AcceptsReturn="True"/>
                     <ComboBox x:Name="ComboBoxGames" Width="500"  materialDesign:HintAssist.Hint="Игра" Margin="0 5 0 0" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
                 </StackPanel>
 

@@ -32,7 +32,6 @@ namespace GamingAssistant.UserContorls
                 challenges = new ObservableCollection<Challenge>(); 
                 db.Users.Load();
                 db.Games.Load();
-                db.Challenges.Load();
                 foreach (var challenge in db.Challenges)
                 {
                     challenges.Add(challenge);
@@ -111,7 +110,6 @@ namespace GamingAssistant.UserContorls
                 challenges = new ObservableCollection<Challenge>();
                 db.Users.Load();
                 db.Games.Load();
-                db.Challenges.Load();
                 foreach (var challenge in db.Challenges)
                 {
                     challenges.Add(challenge);

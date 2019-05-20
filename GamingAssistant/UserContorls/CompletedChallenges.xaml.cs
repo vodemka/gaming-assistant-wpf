@@ -38,7 +38,7 @@ namespace GamingAssistant.UserContorls
             {
                 db.Challenges.Load();
                 db.Users.Load();
-                ListOfCompletedChallenges.ItemsSource = db.UserChallenges.Where(p => p.User.Id == App.CurrentUser.Id && p.IsCompleted == true).ToList();
+                ListOfCompletedChallenges.ItemsSource = db.UserChallenges.Where(p => p.User.Id == App.CurrentUser.Id && p.IsCompleted == true).OrderByDescending(p => p.ConfirmTime).ToList();
             }
         }
 
@@ -48,7 +48,7 @@ namespace GamingAssistant.UserContorls
             {
                 db.Challenges.Load();
                 db.Users.Load();
-                ListOfCompletedChallenges.ItemsSource = db.UserChallenges.Where(p => p.IsCompleted == true).ToList();
+                ListOfCompletedChallenges.ItemsSource = db.UserChallenges.Where(p => p.IsCompleted == true).OrderByDescending(p=>p.ConfirmTime).ToList();
             }
         }
     }

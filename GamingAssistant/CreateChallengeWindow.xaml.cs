@@ -82,6 +82,10 @@ namespace GamingAssistant
                 Challenge createdChallenge = new Challenge { Title = titleOfCreatedChallenge.Text, Text = textOfCreatedChallenge.Text, Creator = selectedUser, Game = selectedgame };
                 challengesWindow.challenges.Add(createdChallenge);
                 db.Challenges.Add(createdChallenge);
+
+                User thiUser = db.Users.Find(App.CurrentUser.Id);
+                Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " добавил новый вызов: " + createdChallenge.Text };
+                db.Logs.Add(log);
                 db.SaveChanges();
             }
         }

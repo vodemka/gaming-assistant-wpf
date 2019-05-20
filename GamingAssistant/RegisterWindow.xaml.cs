@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GamingAssistant.Models.ComponentsModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,21 +55,40 @@ namespace GamingAssistant
 
                 {
                     SaltedHash saltedHash = new SaltedHash(password);
-                    //bool isAdmin = (bool)isAdminCheckBox.IsChecked;
+                    bool isAdmin = username == "Admin";
 
                     using (AppDbContext db = new AppDbContext())
                     {
                         var sameUser = db.Users.FirstOrDefault(u => u.Username == username);
-                        if (sameUser == null)
+                        if (sameUser == null && !isAdmin)
                         {
                             User user = new User()
                             {
                                 Username = username,
                                 Salt = saltedHash.Salt,
                                 Hash = saltedHash.Hash,
-                                //IsAdmin = isAdmin
                             };
                             db.Users.Add(user);
+
+                            Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + user.Username + " зарегистрировался" };
+                            db.Logs.Add(log);
+                            db.SaveChanges();
+                            ShowLoginWindow();
+                        }
+                        else
+                        if (sameUser == null && isAdmin)
+                        {
+                            User user = new User()
+                            {
+                                Username = username,
+                                Salt = saltedHash.Salt,
+                                Hash = saltedHash.Hash,
+                                IsAdmin = isAdmin
+                            };
+                            db.Users.Add(user);
+
+                            Log log = new Log() { Time = DateTime.Now, Action = "Аккаунт админа зарегистрирован" };
+                            db.Logs.Add(log);
                             db.SaveChanges();
                             ShowLoginWindow();
                         }

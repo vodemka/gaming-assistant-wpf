@@ -1,0 +1,40 @@
+﻿<Window x:Class="GamingAssistant.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GamingAssistant"
+             mc:Ignorable="d" 
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="AdminWindow" Height="550" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5 5 0" Click="WindowClose">
+            <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
+        </Button>
+        <StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Админ-панель" Margin="10 5 0 0" FontSize="30" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+            <!--<ScrollViewer Width="990" Height="500" HorizontalAlignment="Center">-->
+                <!--<WrapPanel>-->
+                <!--</WrapPanel>-->
+            <!--</ScrollViewer>-->
+        
+        </StackPanel>
+        <ListBox x:Name="LogList" Width="990" Height="500" Margin="0 40 0 0" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+
+    </Grid>
+</Window>
+

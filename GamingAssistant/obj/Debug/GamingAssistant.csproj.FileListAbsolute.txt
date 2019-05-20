@@ -66,3 +66,5 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.baml

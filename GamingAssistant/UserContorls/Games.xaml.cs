@@ -129,5 +129,23 @@ namespace GamingAssistant.UserContorls
                 ListViewGames.ItemsSource = db.Games.Local;
             }
         }
+
+        private void SortByRating_Click(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Games.Load();
+                ListViewGames.ItemsSource = db.Games.Local.OrderByDescending(p=>p.Rating);
+            }
+        }
+
+        private void SortByName_Click(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Games.Load();
+                ListViewGames.ItemsSource = db.Games.Local.OrderBy(p => p.Name);
+            }
+        }
     }
 }

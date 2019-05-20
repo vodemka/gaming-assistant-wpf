@@ -63,6 +63,11 @@ namespace GamingAssistant
                     nameOfGame.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
                     Game newGame = new Game() { Name = nameOfGame.Text, Rating = ratingOfGame.Value, Image = "/Resources/GamesImages/default.jpg" };
                     db.Games.Add(newGame);
+
+                    User thiUser = db.Users.Find(App.CurrentUser.Id);
+                    Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " добавил в общую библиотеку игру: " + newGame.Name };
+                    db.Logs.Add(log);
+
                     db.SaveChanges();
                     MessageBox.Show("Игра успешно добавлена!", "Отлично");
                     nameOfGame.Text = String.Empty;

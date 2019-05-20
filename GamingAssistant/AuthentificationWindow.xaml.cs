@@ -46,9 +46,20 @@ namespace GamingAssistant
                             {
                                 App.CurrentUser = user;
 
-                                //if (user.IsAdmin)
-                                //{
-                                //}else
+                                if (user.IsAdmin)
+                                {
+                                    AdminWindow adminWindow = new AdminWindow();
+                                    Close();
+                                    //------------LOADER---------------
+                                    Thread myThread = new Thread(new ThreadStart(ShowLoader));
+                                    myThread.SetApartmentState(ApartmentState.STA);
+                                    myThread.Start();
+                                    Thread.Sleep(1000);
+                                    myThread.Abort();
+                                    adminWindow.Show();
+                                    //---------------------------------
+                                }
+                                else
                                 {
                                     HomeWindow homeWindow = new HomeWindow();
                                     Close();
