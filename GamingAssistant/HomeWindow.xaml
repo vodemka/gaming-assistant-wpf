@@ -19,9 +19,11 @@
         >
     <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
         <Grid Height="60" VerticalAlignment="Top" Background="{DynamicResource PrimaryHueMidBrush}">
+            
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Text="ИГРОВОЙ АССИСТЕНТ" FontSize="28" Foreground="{DynamicResource MaterialDesignPaper}" FontFamily="Century Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
             </StackPanel>
+            
             <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="WindowClose">
                 <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
             </Button>

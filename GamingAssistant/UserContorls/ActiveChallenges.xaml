@@ -17,16 +17,16 @@
     <Grid>
         <ScrollViewer>
             <StackPanel Margin="0 0 0 0">
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Активные вызовы" Margin="10 10 0 0" FontSize="22" FontWeight="Medium"/>
                     <Button Width="110" Margin="10 7 0 0" Content="Обновить" Click="RefreshUserChallenges_Click"/>
-                    <!--<Button VerticalAlignment="Center" HorizontalAlignment="Right" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" Click="RefreshUserChallenges_Click" Width="50" Height="50" Margin="-5 -1 0 0" ToolTip="Нажмите, чтобы обновить список вызовов">
-                        <materialDesign:PackIcon Kind="Refresh"></materialDesign:PackIcon>
-                    </Button>-->
                 </StackPanel>
+                
                 <ItemsControl x:Name="listOfActiveChallenges" Margin="0 7 0 0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
+                            
                             <Border>
                                 <StackPanel>
                                     <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Margin="10 0 0 0" CornerRadius="3 3 3 3">
@@ -41,6 +41,7 @@
                                     </Button>
                                 </StackPanel>
                             </Border>
+                            
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                     <ItemsControl.ItemsPanel>
@@ -49,6 +50,7 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
+                
             </StackPanel>
         </ScrollViewer>
     </Grid>

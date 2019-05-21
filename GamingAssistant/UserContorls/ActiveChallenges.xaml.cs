@@ -44,7 +44,7 @@ namespace GamingAssistant.UserContorls
                 {
                     users.Add(us.User);
                 }
-                foreach(var ch in db.UserChallenges.Local)
+                foreach (var ch in db.UserChallenges.Local)
                 {
                     challenges.Add(ch.Challenge);
                 }

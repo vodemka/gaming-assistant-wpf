@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GamingAssistant.Models.ComponentsModel
 {
@@ -21,14 +17,16 @@ namespace GamingAssistant.Models.ComponentsModel
         public DateTime? ConfirmTime { get; set; } = null;
         public bool IsUserReady { get; set; } = false;
 
-        public UserChallenge()
-        {
-           
-        }
-
         public override string ToString()
         {
-            return User.Username + " выполнил: " + Challenge.Text + " (" + ConfirmTime.ToString() + ")";
+            if (IsCompleted)
+            {
+                return User.Username + " выполнил: " + Challenge.Text + " (" + ConfirmTime.ToString() + ")";
+            }
+            else
+            {
+                return "Вызов не подтвержден";
+            }
         }
     }
 }

@@ -23,7 +23,9 @@
             <ColumnDefinition Width="210"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        
         <Rectangle x:Name="hideAllRectangle" Width="1080" Height="490" Fill="{DynamicResource PrimaryHueLightBrush}" Opacity="0"/>
+        
         <StackPanel Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Background="{DynamicResource PrimaryHueMidBrush}">
             <materialDesign:Chip x:Name="userInfoChip" Margin="6 10 0 0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center"/>
             <materialDesign:PackIcon Kind="GamepadVariant" Width="50" Foreground="{DynamicResource MaterialDesignPaper}" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -37,6 +39,7 @@
                 <Button Content="ВЫПОЛНЕНЫЕ ВЫЗОВЫ" Width="205" Margin="0 5 0 0" Foreground="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource MaterialDesignPaper}" Click="GoToComplited_Click"/>
             </StackPanel>
         </StackPanel>
+        
         <StackPanel Grid.Column="1" Grid.RowSpan="2" Grid.Row="0">
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="CountOfUserGamesTextBox" Text="Количество игр на аккаунте: " Margin="10" FontSize="22" FontWeight="Medium"/>

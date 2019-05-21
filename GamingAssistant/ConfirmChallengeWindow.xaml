@@ -16,17 +16,21 @@
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            
             <Label Grid.Row="0" x:Name="activeChallengeTitle" FontSize="30" Content="TITLE" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0" FontWeight="Bold"/>
             <StackPanel Grid.Row="1">
                 <TextBlock x:Name="activeChallengeText" Text="Задание" FontSize="20" Margin="10 0 5 10" TextWrapping="Wrap"/>
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Дата принятия:" FontSize="20" Margin="10 0 5 10" FontWeight="Bold"></TextBlock>
                     <TextBlock x:Name="activeChallengeDate" Text="Дата принятия" FontSize="20" Margin="10 0 5 10"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Дата выполнения:" FontSize="20" Margin="10 0 5 10"  FontWeight="Bold"></TextBlock>
                     <TextBlock x:Name="activeChallengeConfirmDate" Text="Дата подтверждения" FontSize="20" Margin="10 0 5 15"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Подтверждающий скриншот:" FontSize="20" Margin="10 0 5 10" FontWeight="Bold"></TextBlock>
                     <TextBlock FontSize="20" Margin="10 0 5 15">
@@ -37,6 +41,7 @@
                         </Hyperlink>
                     </TextBlock>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 0">
                     <Button Content="Подтвердить выполнение"  Width="210" Margin="5 0 5 5" Background="MediumSeaGreen" Click="ConfirmChallenge_Click">
                         <Button.BorderBrush>MediumSeaGreen</Button.BorderBrush>
@@ -45,6 +50,7 @@
                         <Button.BorderBrush>IndianRed</Button.BorderBrush>
                     </Button>
                 </StackPanel>
+                
             </StackPanel>
         </Grid>
     </Border>

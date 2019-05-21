@@ -21,17 +21,13 @@
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5 5 0" Click="WindowClose">
             <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
         </Button>
+        
         <StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock Text="Админ-панель" Margin="10 5 0 0" FontSize="30" FontWeight="Medium" HorizontalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
-            <!--<ScrollViewer Width="990" Height="500" HorizontalAlignment="Center">-->
-                <!--<WrapPanel>-->
-                <!--</WrapPanel>-->
-            <!--</ScrollViewer>-->
-        
         </StackPanel>
         <ListBox x:Name="LogList" Width="990" Height="500" Margin="0 40 0 0" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
 

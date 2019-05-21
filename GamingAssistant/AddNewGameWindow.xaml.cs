@@ -47,12 +47,14 @@ namespace GamingAssistant
                 if (isAlreadyExists)
                 {
                     MessageBox.Show("Эта игра уже есть в библиотеке", "Ошибка");
-                } else 
+                }
+                else 
                 if (nameOfGame.Text.Length < 2)
                 {
                     MessageBox.Show("Название игры не может быть меньше 2 символов");
                     nameOfGame.BorderBrush = new SolidColorBrush(Colors.Red);
-                } else 
+                }
+                else 
                 if (nameOfGame.Text.Length > 20)
                 {
                     MessageBox.Show("Название игры не может быть больше 20 символов");

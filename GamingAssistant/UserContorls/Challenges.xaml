@@ -15,6 +15,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <StackPanel ScrollViewer.CanContentScroll="True">
+            
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Вызовы" Margin="10" FontSize="22" FontWeight="Medium"/>
                 <Button Width="150" Content="Создать новый" Click="AddNewChallengeClick"/>
@@ -23,6 +24,7 @@
                 </Button>
                 <Button Width="150" Content="Обновить" Margin="10 0 0 0" Click="RefreshChallengesClick"/>
             </StackPanel>
+            
             <DataGrid x:Name="DataGridChallenges" FontSize="14" Margin="0 3 0  0" MaxHeight="500" IsReadOnly="True" CanUserSortColumns="True"  CanUserAddRows="False" AutoGenerateColumns="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Auto">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Игра" Width="Auto">
@@ -42,6 +44,7 @@
                     <DataGridTextColumn Binding="{Binding CountOfComplete}" Header="Выполнен раз" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
+            
         </StackPanel>
     </Grid>
 </UserControl>

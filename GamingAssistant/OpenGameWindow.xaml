@@ -14,8 +14,10 @@
         <Grid MouseLeftButtonDown="RangeDragWindow_MouseLeftButtonDown">
             <Label x:Name="currentGameLabel" FontSize="30" Content="GAME" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 0" FontWeight="Bold"/>
             <TextBlock x:Name="CommentsTextBlock"  Text="Отзывы" Margin="40 50 30 50" FontSize="22" FontWeight="Medium"/>
+            
             <ScrollViewer x:Name="CommentsScrollViewer" Width="770" Height="370" Margin="0 35 0 0">
                 <StackPanel Margin="10 10 0 10" Orientation="Vertical">
+                    
                     <StackPanel Margin="5 0 0 0">
                         <ItemsControl x:Name="listOfComments">
                             <ItemsControl.ItemTemplate>
@@ -33,6 +35,7 @@
                             </ItemsControl.ItemsPanel>
                         </ItemsControl>
                     </StackPanel>
+                    
                 </StackPanel>
             </ScrollViewer>
             

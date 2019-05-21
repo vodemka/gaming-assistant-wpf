@@ -24,7 +24,6 @@ namespace GamingAssistant
         public RegisterWindow()
         {
             InitializeComponent();
-            
             regLoginTextBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
             regPasswordBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
             regConfirmPasswordBox.BorderBrush = (Brush)new BrushConverter().ConvertFrom("#89000000");
@@ -52,7 +51,6 @@ namespace GamingAssistant
                 };
 
                 if (Validation.TryValidateObject(registerModel, regLoginTextBox, regPasswordBox, regConfirmPasswordBox))
-
                 {
                     SaltedHash saltedHash = new SaltedHash(password);
                     bool isAdmin = username == "Admin";

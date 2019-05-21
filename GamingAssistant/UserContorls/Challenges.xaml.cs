@@ -29,7 +29,7 @@ namespace GamingAssistant.UserContorls
             using (AppDbContext db = new AppDbContext())
             {
                 InitializeComponent();
-                challenges = new ObservableCollection<Challenge>(); 
+                challenges = new ObservableCollection<Challenge>();
                 db.Users.Load();
                 db.Games.Load();
                 foreach (var challenge in db.Challenges)

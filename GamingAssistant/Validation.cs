@@ -44,7 +44,6 @@ namespace GamingAssistant
                         }
                     }
 
-                    // для атрибута Compare свойства (name) не находит
                     if (confirmPasswordBox != null && !String.Equals(passwordBox.Password, confirmPasswordBox.Password))
                     {
                         confirmPasswordBox.BorderBrush = new SolidColorBrush(Colors.Red);
