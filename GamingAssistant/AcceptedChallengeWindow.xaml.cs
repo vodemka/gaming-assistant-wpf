@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -98,7 +99,7 @@ namespace GamingAssistant
 
                 if (proofLinkTextBox.Text == String.Empty)
                 {
-                    MessageBox.Show("Заполните поле!", "Ошибка");
+                    MaterialMessageBox.Show("Заполните поле!", "Ошибка");
                     proofLinkTextBox.BorderBrush = new SolidColorBrush(Colors.Red);
                 }
                 else
@@ -118,12 +119,12 @@ namespace GamingAssistant
                         db.Logs.Add(log);
                         db.SaveChanges();
                     }
-                    MessageBox.Show("Вы отправили подтверждение на рассмотрение!", "Отлично");
+                    MaterialMessageBox.Show("Вы отправили подтверждение на рассмотрение!", "Отлично");
                 }
             }
             else
             {
-                MessageBox.Show("Вы уже подтверждали", "Ошибка");
+                MaterialMessageBox.Show("Вы уже подтверждали", "Ошибка");
             }
         }
     }

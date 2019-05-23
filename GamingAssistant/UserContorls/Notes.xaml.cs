@@ -1,4 +1,5 @@
-﻿using GamingAssistant.Models.ComponentsModel;
+﻿using BespokeFusion;
+using GamingAssistant.Models.ComponentsModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -40,7 +41,7 @@ namespace GamingAssistant.UserContorls
                 db.Entry(selectedNote).State = EntityState.Modified;
                 db.SaveChanges();
             }
-            MessageBox.Show("Заметка измена","Успех");
+            MaterialMessageBox.Show("Заметка измена","Успех");
             ShowNotes();
         }
 
@@ -53,7 +54,7 @@ namespace GamingAssistant.UserContorls
                 db.Notes.Remove(selectedNote);
                 db.SaveChanges();
             }
-            MessageBox.Show("Заметка удалена","Успех");
+            MaterialMessageBox.Show("Заметка удалена","Успех");
             ShowNotes();
         }
 

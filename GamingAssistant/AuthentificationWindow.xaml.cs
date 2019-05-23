@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BespokeFusion;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -89,7 +90,7 @@ namespace GamingAssistant
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                MaterialMessageBox.Show(ex.Message, "Ошибка");
             }
         }
 

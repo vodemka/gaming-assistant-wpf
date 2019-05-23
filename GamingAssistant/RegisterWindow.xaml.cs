@@ -1,5 +1,6 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -100,7 +101,7 @@ namespace GamingAssistant
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                MaterialMessageBox.Show(ex.Message, "Ошибка");
             }
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)

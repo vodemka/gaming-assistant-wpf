@@ -10,7 +10,7 @@ namespace GamingAssistant.Models.ComponentsModel
 
         public override string ToString()
         {
-            return Action + " - " + Time;
+            return "[" + Time + "] " + Action;
         }
     }
 }

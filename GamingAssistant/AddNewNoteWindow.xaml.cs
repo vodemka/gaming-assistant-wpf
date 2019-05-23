@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -56,11 +57,11 @@ namespace GamingAssistant
         {
             if (textOfNote.Text == String.Empty)
             {
-                MessageBox.Show("Вы хотите добавить пустую заметку", "Упс..");
+                MaterialMessageBox.Show("Вы хотите добавить пустую заметку", "Упс..");
             }
             else if (ComboBoxGames.SelectedItem == null)
             {
-                MessageBox.Show("Сначала нужно добавить игру", "Упс..");
+                MaterialMessageBox.Show("Сначала нужно добавить игру", "Упс..");
             }
             else
             {
@@ -74,7 +75,7 @@ namespace GamingAssistant
                     db.Notes.Add(newNote);
                     db.SaveChanges();
                 }
-                MessageBox.Show("Заметка успешно добавлена", "Отлично");
+                MaterialMessageBox.Show("Заметка успешно добавлена", "Отлично");
                 notesWindow.ShowNotes();
                 Close();
             }

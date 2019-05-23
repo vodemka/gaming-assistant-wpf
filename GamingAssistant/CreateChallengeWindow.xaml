@@ -12,7 +12,7 @@
         <StackPanel Margin="3 50 3 3">
             <TextBox x:Name="titleOfCreatedChallenge" materialDesign:HintAssist.Hint="Заголовок" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <TextBox x:Name="textOfCreatedChallenge" Height="55" materialDesign:HintAssist.Hint="Задание" FontSize="14" Margin="0 5 0 0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Text}"/>
-            <ComboBox x:Name="ComboBoxGames" materialDesign:HintAssist.Hint="Игра" Margin="0 5 0 0" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+            <ComboBox x:Name="ComboBoxGames" materialDesign:HintAssist.Hint="Игра" Margin="0 5 0 0" IsEditable="False" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
                 <Button Content="СОЗДАТЬ" Style="{StaticResource MaterialDesignFlatButton}" Click="AddNewChallengeClick"  ToolTip="Нажмите чтобы создать"/>

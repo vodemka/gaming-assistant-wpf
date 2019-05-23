@@ -1,5 +1,6 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
@@ -74,17 +75,17 @@ namespace GamingAssistant.UserContorls
                     }
                     if (isUserHaveAnyActive)
                     {
-                        MessageBox.Show("У Вас уже есть активный вызов", "Ошибка");
+                        MaterialMessageBox.Show("У Вас уже есть активный вызов", "Ошибка");
                         DataGridChallenges.SelectedItem = null;
                     } else
                     if (isEverComplete)
                     {
-                        MessageBox.Show("Вы уже выполняли данный вызов!", "Упс..");
+                        MaterialMessageBox.Show("Вы уже выполняли данный вызов!", "Упс..");
                         DataGridChallenges.SelectedItem = null;
                     } else
                     if (isCreatedByUser)
                     {
-                        MessageBox.Show("Вы не можете принять созданый Вами вызов", "Ошибка");
+                        MaterialMessageBox.Show("Вы не можете принять созданый Вами вызов", "Ошибка");
                         DataGridChallenges.SelectedItem = null;
                     }
                     else
@@ -92,14 +93,14 @@ namespace GamingAssistant.UserContorls
                         UserChallenge userChallenge = new UserChallenge() { User = user, Challenge = challenge, AcceptTime=DateTime.Now };
                         db.UserChallenges.Add(userChallenge);
                         db.SaveChanges();
-                        MessageBox.Show("Отлично! Вызов добавлен", "Успех");
+                        MaterialMessageBox.Show("Отлично! Вызов добавлен", "Успех");
                         DataGridChallenges.SelectedItem = null;
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Сначала нужно выбрать вызов", "Ошибка");
+                MaterialMessageBox.Show("Сначала нужно выбрать вызов", "Ошибка");
             }
         }
 

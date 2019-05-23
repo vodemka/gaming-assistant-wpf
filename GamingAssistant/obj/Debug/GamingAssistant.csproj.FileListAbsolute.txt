@@ -65,5 +65,140 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAss
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.baml
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.g.cs
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.baml
-D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe.CodeAnalysisLog.xml
-D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe.lastcodeanalysissucceeded
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache
+G:\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe.config
+G:\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe
+G:\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.pdb
+G:\GamingAssistant\GamingAssistant\bin\Debug\BespokeFusion.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignColors.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\System.Windows.Interactivity.dll
+G:\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.pdb
+G:\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.xml
+G:\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.xml
+G:\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.xml
+G:\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.pdb
+G:\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.xml
+G:\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+G:\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.xml
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache
+G:\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\AuthentificationWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\CreateChallengeWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\HomeWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\Loader.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\RegisterWindow.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Challenges.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Games.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Home.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\App.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant_MarkupCompile.cache
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant_MarkupCompile.lref
+G:\GamingAssistant\GamingAssistant\obj\Debug\App.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\AuthentificationWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\CreateChallengeWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\HomeWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\Loader.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\RegisterWindow.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Challenges.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Games.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Home.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.baml
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.g.resources
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.Properties.Resources.resources
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.GenerateResource.cache
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.CoreCompileInputs.cache
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.CopyComplete
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.exe
+G:\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe.config
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.exe
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\GamingAssistant.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\BespokeFusion.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignColors.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\System.Windows.Interactivity.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Dragablz.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\EntityFramework.SqlServer.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MahApps.Metro.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csprojAssemblyReference.cache
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AuthentificationWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\CreateChallengeWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\HomeWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\Loader.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\RegisterWindow.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Challenges.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Games.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Home.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\App.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant_MarkupCompile.cache
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant_MarkupCompile.lref
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\App.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AcceptedChallengeWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AddNewGameWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AddNewNoteWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AdminWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\AuthentificationWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\ConfirmChallengeWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\CreateChallengeWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\HomeWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\LeaveCommentWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\Loader.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\OpenGameWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\RegisterWindow.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Challenges.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\ActiveChallenges.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\CompletedChallenges.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Games.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Home.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\UserContorls\Notes.baml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.g.resources
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.Properties.Resources.resources
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.GenerateResource.cache
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.CoreCompileInputs.cache
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.CopyComplete
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.exe
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.pdb

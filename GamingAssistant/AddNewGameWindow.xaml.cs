@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,18 +47,18 @@ namespace GamingAssistant
                 }
                 if (isAlreadyExists)
                 {
-                    MessageBox.Show("Эта игра уже есть в библиотеке", "Ошибка");
+                    MaterialMessageBox.Show("Эта игра уже есть в библиотеке", "Ошибка");
                 }
                 else 
                 if (nameOfGame.Text.Length < 2)
                 {
-                    MessageBox.Show("Название игры не может быть меньше 2 символов");
+                    MaterialMessageBox.Show("Название игры не может быть меньше 2 символов");
                     nameOfGame.BorderBrush = new SolidColorBrush(Colors.Red);
                 }
                 else 
                 if (nameOfGame.Text.Length > 20)
                 {
-                    MessageBox.Show("Название игры не может быть больше 20 символов");
+                    MaterialMessageBox.Show("Название игры не может быть больше 20 символов");
                     nameOfGame.BorderBrush = new SolidColorBrush(Colors.Red);
                 }
                 else
@@ -71,7 +72,7 @@ namespace GamingAssistant
                     db.Logs.Add(log);
 
                     db.SaveChanges();
-                    MessageBox.Show("Игра успешно добавлена!", "Отлично");
+                    MaterialMessageBox.Show("Игра успешно добавлена!", "Отлично");
                     nameOfGame.Text = String.Empty;
                     gamesWindow.ShowGames();
                 }

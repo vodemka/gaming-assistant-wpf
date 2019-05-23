@@ -1,4 +1,5 @@
-﻿using GamingAssistant.Models.ComponentsModel;
+﻿using BespokeFusion;
+using GamingAssistant.Models.ComponentsModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -133,7 +134,7 @@ namespace GamingAssistant.UserContorls
             }
             else
             {
-                MessageBox.Show("Сначала нужно выбрать игру", "Ошибка");
+                MaterialMessageBox.Show("Сначала нужно выбрать игру", "Ошибка");
             }
         }
 
@@ -147,7 +148,7 @@ namespace GamingAssistant.UserContorls
             }
             if (!flag)
             {
-                MessageBox.Show("У Вас нет активных вызовов", "Упс..");
+                MaterialMessageBox.Show("У Вас нет активных вызовов", "Упс..");
             }
             else
             

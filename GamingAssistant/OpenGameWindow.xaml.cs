@@ -66,12 +66,12 @@ namespace GamingAssistant
                 {
                     if (game == ga) { isAlreadyAdded = true; break; } 
                 }
-                if (isAlreadyAdded) {/* msg.Show();*/ MessageBox.Show( "Игра уже есть на вашем аккаунте!","Ошибка"); }
+                if (isAlreadyAdded) {/* msg.Show();*/ MaterialMessageBox.Show( "Игра уже есть на вашем аккаунте!","Ошибка"); }
                 else
                 {
                     user.Games.Add(game);
                     db.SaveChanges();
-                    MessageBox.Show( "Игра успешно добавлена!","Отлично");
+                    MaterialMessageBox.Show( "Игра успешно добавлена!","Отлично");
                 }
             }
         }

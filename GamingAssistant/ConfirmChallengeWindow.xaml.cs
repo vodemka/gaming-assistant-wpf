@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -101,19 +102,19 @@ namespace GamingAssistant
 
             if (!flag)
             {
-                MessageBox.Show("Этот вызов уже подтвержден. Обновите список вызовов", "Упс..");
+                MaterialMessageBox.Show("Этот вызов уже подтвержден. Обновите список вызовов", "Упс..");
             }
             else
 
             if (!flagIsOwner)
             {
-                MessageBox.Show("Вы не можете подтвердить свой же вызов", "Упс..");
+                MaterialMessageBox.Show("Вы не можете подтвердить свой же вызов", "Упс..");
             }
             else
 
             if (!flagIsReady)
             {
-                MessageBox.Show("Пользователь еще выполняет этот вызов");
+                MaterialMessageBox.Show("Пользователь еще выполняет этот вызов");
             }
             else
             {
@@ -131,7 +132,7 @@ namespace GamingAssistant
                     db.Logs.Add(log);
                     db.SaveChanges();
                 }
-                MessageBox.Show("Вы подтвердили вызов, спасибо!", "Отлично");
+                MaterialMessageBox.Show("Вы подтвердили вызов, спасибо!", "Отлично");
                 activeChallenges.ShowActiveChallenges();
             }
         }

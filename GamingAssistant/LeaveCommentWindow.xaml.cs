@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -58,12 +59,12 @@ namespace GamingAssistant
         {
             if (textOfComment.Text == String.Empty)
             {
-                MessageBox.Show("Отзыв не может быть пустым", "Упс..");
+                MaterialMessageBox.Show("Отзыв не может быть пустым", "Упс..");
                 textOfComment.BorderBrush = new SolidColorBrush(Colors.Red);
             }
             else if (textOfComment.Text.Length < 10)
             {
-                MessageBox.Show("Отзыв слишком короткий. Минимальная длина 10 символов", "Упс..");
+                MaterialMessageBox.Show("Отзыв слишком короткий. Минимальная длина 10 символов", "Упс..");
             }
             else
             {
@@ -72,18 +73,26 @@ namespace GamingAssistant
                 {
                     db.Games.Load();
                     db.Users.Load();
-                    Game selectedgame = db.Games.Local.Single(p => p.Name.Equals(ComboBoxGames.SelectedItem.ToString()));
-                    User selectedUser = db.Users.Local.Single(p => p.Id.Equals(App.CurrentUser.Id));
-                    Comment createdComment = new Comment { Text = textOfComment.Text, User = selectedUser, Game = selectedgame };
-                    db.Comments.Add(createdComment);
+                    if (ComboBoxGames.SelectedItem != null)
+                    {
+                        Game selectedgame = db.Games.Local.Single(p => p.Name.Equals(ComboBoxGames.SelectedItem.ToString()));
+                        User selectedUser = db.Users.Local.Single(p => p.Id.Equals(App.CurrentUser.Id));
+                        Comment createdComment = new Comment { Text = textOfComment.Text, User = selectedUser, Game = selectedgame };
+                        db.Comments.Add(createdComment);
 
-                    User thiUser = db.Users.Find(App.CurrentUser.Id);
-                    Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " оставил комментарий: " + createdComment.Text + " к игре " + selectedgame.Name };
-                    db.Logs.Add(log);
-                    db.SaveChanges();
+                        User thiUser = db.Users.Find(App.CurrentUser.Id);
+                        Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " оставил комментарий: " + createdComment.Text + " к игре " + selectedgame.Name };
+                        db.Logs.Add(log);
+                        db.SaveChanges();
+                        MaterialMessageBox.Show("Комментарий отправлен!", "Успешно");
+                        textOfComment.Text = String.Empty;
+                    }
+                    else
+                    {
+                        MaterialMessageBox.Show("Игра не выбрана", "Ошибка");
+                    }
+                   
                 }
-                MessageBox.Show("Комментарий отправлен!", "Успешно");
-                textOfComment.Text = String.Empty;
             }
         }
 

@@ -124,7 +124,10 @@ namespace GamingAssistant.UserContorls
         {
             using (AppDbContext db = new AppDbContext())
             {
-                //InitGames();
+                if (db.Games.Count() == 0)
+                {
+                    InitGames();
+                }
                 db.Games.Load();
                 ListViewGames.ItemsSource = db.Games.Local;
             }

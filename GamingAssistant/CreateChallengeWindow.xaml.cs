@@ -1,6 +1,7 @@
 ﻿using GamingAssistant.Models.ComponentsModel;
 using GamingAssistant.UserContorls;
 using System;
+using BespokeFusion;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,15 +56,15 @@ namespace GamingAssistant
         {
             if (titleOfCreatedChallenge.Text == String.Empty)
             {
-                MessageBox.Show("Укажите заголовок вызова", "Ошибка");
+                MaterialMessageBox.Show("Укажите заголовок вызова", "Ошибка");
             }
             else if (textOfCreatedChallenge.Text == String.Empty)
             {
-                MessageBox.Show("Напишите задание вызова", "Ошибка");
+                MaterialMessageBox.Show("Напишите задание вызова", "Ошибка");
             }
             else if (ComboBoxGames.SelectedItem == null)
             {
-                MessageBox.Show("Сначала нужно добавить игру", "Упс..");
+                MaterialMessageBox.Show("Сначала нужно добавить игру", "Упс..");
             }
             else
             {

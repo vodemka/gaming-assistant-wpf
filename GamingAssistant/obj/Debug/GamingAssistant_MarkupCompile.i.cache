@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\obj\Debug\
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\
 GamingAssistant
 none
 false
 DEBUG;TRACE
-D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\Game Assistent\GamingAssistant\GamingAssistant\App.xaml
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\App.xaml
 18-1623923471
 
 381830004814
-22128779150
+22-1225551606
 AcceptedChallengeWindow.xaml;AddNewGameWindow.xaml;AddNewNoteWindow.xaml;AdminWindow.xaml;AuthentificationWindow.xaml;ConfirmChallengeWindow.xaml;CreateChallengeWindow.xaml;HomeWindow.xaml;LeaveCommentWindow.xaml;Loader.xaml;OpenGameWindow.xaml;RegisterWindow.xaml;UserContorls\Challenges.xaml;UserContorls\ActiveChallenges.xaml;UserContorls\CompletedChallenges.xaml;UserContorls\Games.xaml;UserContorls\Home.xaml;UserContorls\Notes.xaml;
 
-False
+True
 
