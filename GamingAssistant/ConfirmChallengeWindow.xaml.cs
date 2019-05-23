@@ -82,7 +82,14 @@ namespace GamingAssistant
             activeChallengeConfirmDate.Text = DateOfConfirm;
             if (flag)
             {
-                activeChallengeProofLink.NavigateUri = new Uri(ProofLink);
+                //try
+                //{
+                    activeChallengeProofLink.NavigateUri = new Uri(ProofLink);
+                //}
+                //catch (UriFormatException e)
+                //{
+                //    MaterialMessageBox.Show("Ссылка не корректна", "Ошибка");
+                //}
             }
         }
 

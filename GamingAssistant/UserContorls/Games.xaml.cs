@@ -150,5 +150,14 @@ namespace GamingAssistant.UserContorls
                 ListViewGames.ItemsSource = db.Games.Local.OrderBy(p => p.Name);
             }
         }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Games.Load();
+                ListViewGames.ItemsSource = db.Games.Local.Where(p => p.Name.ToUpper().Contains(SearchTextBox.Text.ToUpper()));
+            }
+        }
     }
 }

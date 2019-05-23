@@ -27,6 +27,7 @@
                     </Button>
                     <Button Width="150" Content="По рейтингу" Margin="10 7 0 0" Click="SortByRating_Click"/>
                     <Button Width="150" Content="По названию" Margin="10 7 0 0" Click="SortByName_Click"/>
+                    <TextBox x:Name="SearchTextBox" Width="300" Height="40" Margin="10 0 0 0" ToolTip="Поиск по названию" materialDesign:HintAssist.Hint="Поиск" TextChanged="SearchTextBox_TextChanged"></TextBox>
                 </StackPanel>
                 
                 <StackPanel Margin="20 0">

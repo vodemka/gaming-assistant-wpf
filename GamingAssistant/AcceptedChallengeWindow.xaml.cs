@@ -41,6 +41,10 @@ namespace GamingAssistant
             {
                 User user = db.Users.Find(App.CurrentUser.Id);
                 UserChallenge uch = user.UserChallenge.Where(p=>p.IsCompleted == false).First();
+                if (uch.IsUserReady == true)
+                {
+                    UserReadyButton.IsEnabled = false;
+                }
                 Challenge ch = db.Challenges.Find(uch.Challenge.Id);
                 Game game = db.Games.Find(ch.Game.Id);
                 Title = ch.Title;
@@ -82,6 +86,21 @@ namespace GamingAssistant
             Close();
         }
 
+        private void DeclineChallenge(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                User user = db.Users.Find(App.CurrentUser.Id);
+                UserChallenge uch = user.UserChallenge.Where(p => p.IsCompleted == false).First();
+                db.UserChallenges.Remove(uch);
+                db.SaveChanges();
+                MaterialMessageBox.Show("Вы успешно отменили вызов! Просмотрите активные вызовы и выберите новый :)", "Успех");
+                homeWindow.hideAllRectangle.Opacity = 0;
+                homeWindow.DataGridUserGames.Opacity = 1;
+                Close();
+            }
+        }
+
         private void UserReadyWithChallenge_Click(object sender, RoutedEventArgs e)
         {
             bool flag = true;
@@ -109,17 +128,25 @@ namespace GamingAssistant
                     {
                         User user = db.Users.Find(App.CurrentUser.Id);
                         UserChallenge uch = user.UserChallenge.Where(p=>p.IsCompleted == false).First();
-                        uch.ConfirmTime = DateTime.Now;
-                        uch.ProofLink = proofLinkTextBox.Text;
-                        uch.IsUserReady = true;
-                        db.Entry(uch).State = EntityState.Modified;
-
-                        User thiUser = db.Users.Find(App.CurrentUser.Id);
-                        Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " отправил подтверждение вызова: " + uch.Challenge.Text };
-                        db.Logs.Add(log);
-                        db.SaveChanges();
+                        try
+                        {
+                            Hyperlink hyperlink = new Hyperlink();
+                            hyperlink.NavigateUri = new Uri(proofLinkTextBox.Text);
+                            uch.ConfirmTime = DateTime.Now;
+                            uch.ProofLink = proofLinkTextBox.Text;
+                            uch.IsUserReady = true;
+                            db.Entry(uch).State = EntityState.Modified;
+                            User thiUser = db.Users.Find(App.CurrentUser.Id);
+                            Log log = new Log() { Time = DateTime.Now, Action = "Пользователь " + thiUser.Username + " отправил подтверждение вызова: " + uch.Challenge.Text };
+                            db.Logs.Add(log);
+                            db.SaveChanges();
+                            MaterialMessageBox.Show("Вы отправили подтверждение на рассмотрение!", "Отлично");
+                        }
+                        catch (UriFormatException)
+                        {
+                            MaterialMessageBox.Show("Ссылка некоректна", "Ошибка");
+                        }
                     }
-                    MaterialMessageBox.Show("Вы отправили подтверждение на рассмотрение!", "Отлично");
                 }
             }
             else
