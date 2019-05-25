@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для AddNewGameWindow.xaml
-    /// </summary>
     public partial class AddNewGameWindow : Window
     {
         Games gamesWindow;

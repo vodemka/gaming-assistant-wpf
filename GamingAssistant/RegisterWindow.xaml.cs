@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для RegisterWindow.xaml
-    /// </summary>
     public partial class RegisterWindow : Window
     {
         public RegisterWindow()

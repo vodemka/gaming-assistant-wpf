@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для Games.xaml
-    /// </summary>
     public partial class Games : UserControl
     {
         public ObservableCollection<Game> games;

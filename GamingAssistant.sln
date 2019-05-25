@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingAssistant", "GamingAssistant\GamingAssistant.csproj", "{D3144349-1BEC-4E52-9443-C4B16813365B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupGaminAssistant", "SetupGaminAssistant\SetupGaminAssistant.vdproj", "{EA7352FE-509F-468A-93DC-824F8C0087C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{D3144349-1BEC-4E52-9443-C4B16813365B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3144349-1BEC-4E52-9443-C4B16813365B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3144349-1BEC-4E52-9443-C4B16813365B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7352FE-509F-468A-93DC-824F8C0087C3}.Debug|Any CPU.ActiveCfg = Debug
+		{EA7352FE-509F-468A-93DC-824F8C0087C3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

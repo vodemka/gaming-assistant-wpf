@@ -20,9 +20,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для Home.xaml
-    /// </summary>
     public partial class Home : UserControl
     {
         public ObservableCollection<Game> games;

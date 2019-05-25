@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для Notes.xaml
-    /// </summary>
     public partial class Notes : UserControl
     {
         IEnumerable<Note> notes = new List<Note>();

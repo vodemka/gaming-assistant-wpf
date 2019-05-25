@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для ActiveChallenges.xaml
-    /// </summary>
     public partial class ActiveChallenges : UserControl
     {
         public ActiveChallenges()

@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для AddNewNoteWindow.xaml
-    /// </summary>
     public partial class AddNewNoteWindow : Window
     {
         Notes notesWindow;

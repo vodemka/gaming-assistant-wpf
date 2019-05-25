@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для CompletedChallenges.xaml
-    /// </summary>
     public partial class CompletedChallenges : UserControl
     {
         public CompletedChallenges()

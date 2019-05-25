@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для AuthentificationWindow.xaml
-    /// </summary>
     public partial class AuthentificationWindow : Window
     {
         public AuthentificationWindow()

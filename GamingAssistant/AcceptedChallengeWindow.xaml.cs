@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для AcceptedChallengeWindow.xaml
-    /// </summary>
     public partial class AcceptedChallengeWindow : Window
     {
         Home homeWindow;

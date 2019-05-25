@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для OpenGameWindow.xaml
-    /// </summary>
     public partial class OpenGameWindow : Window
     {
         Games gamesWindow;
@@ -44,17 +41,6 @@ namespace GamingAssistant
             gamesWindow.ListViewGames.Opacity = 1;
         }
 
-        //CustomMaterialMessageBox msg = new CustomMaterialMessageBox
-        //{
-        //    TxtMessage = { Text = "Do you like white wine?", Foreground = Brushes.Black },
-        //    TxtTitle = { Text = "This is too cool", Foreground = Brushes.Black },
-        //    BtnOk = { Content = "Yes" },
-        //    BtnCancel = { Content = "Noooo" },
-        //    MainContentControl = { Background = Brushes.White },
-        //    TitleBackgroundPanel = { Background = Brushes.White },
-        //    BorderBrush = Brushes.Blue
-        //};
-
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             using (AppDbContext db = new AppDbContext())
@@ -66,7 +52,7 @@ namespace GamingAssistant
                 {
                     if (game == ga) { isAlreadyAdded = true; break; } 
                 }
-                if (isAlreadyAdded) {/* msg.Show();*/ MaterialMessageBox.Show( "Игра уже есть на вашем аккаунте!","Ошибка"); }
+                if (isAlreadyAdded) { MaterialMessageBox.Show( "Игра уже есть на вашем аккаунте!","Ошибка"); }
                 else
                 {
                     user.Games.Add(game);

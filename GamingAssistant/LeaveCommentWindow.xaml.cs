@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для LeaveCommentWindow.xaml
-    /// </summary>
     public partial class LeaveCommentWindow : Window
     {
         Home homeWindow;

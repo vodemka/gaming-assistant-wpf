@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace GamingAssistant.UserContorls
 {
-    /// <summary>
-    /// Логика взаимодействия для Challenges.xaml
-    /// </summary>
     public partial class Challenges : UserControl
     {
         public ObservableCollection<Challenge> challenges;

@@ -1,0 +1,58 @@
+﻿2019-05-23 21:09:12> Program: Starting Squirrel Updater: --releasify GamingAssistant.1.0.0.nupkg
+2019-05-23 21:09:12> Program: Bootstrapper EXE found at:D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2019-05-23 21:09:12> Program: Creating release package: D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant.1.0.0.nupkg
+2019-05-23 21:09:13> ReleasePackage: Creating release package: D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant.1.0.0.nupkg => D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant-1.0.0-full.nupkg
+2019-05-23 21:09:14> ReleasePackage: Extracting dependent packages: []
+2019-05-23 21:09:14> ReleasePackage: Removing unnecessary data
+2019-05-23 21:09:14> ReleasePackage: No release notes found in C:\Users\Vadim\AppData\Local\SquirrelTemp\tempa\GamingAssistant.nuspec
+2019-05-23 21:09:16> Program: Building embedded zip file for Setup.exe
+2019-05-23 21:09:18> Unhandled exception: System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: Failed to modify resources, command invoked was: 'D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\rcedit.exe "D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\Setup.exe" --set-version-string "CompanyName" "Vadim Dokurno" --set-version-string "LegalCopyright" "Copyright © 2019 Vadim Dokurno" --set-version-string "FileDescription" "My OOTP course work" --set-version-string "ProductName" "My OOTP course work" --set-file-version 1.0.0 --set-product-version 1.0.0'
+
+Output was:
+Fatal error: Unable to load file
+   в Squirrel.Update.Program.<setPEVersionInfoAndIcon>d__20.MoveNext()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в Squirrel.Update.Program.<>c__DisplayClass10_0.<Releasify>b__6()
+   в Squirrel.Utility.<>c__DisplayClass8_0.<Retry>b__0()
+   в Squirrel.Utility.Retry[T](Func`1 block, Int32 retries)
+   в Squirrel.Utility.Retry(Action block, Int32 retries)
+   в Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi, String frameworkVersion, Boolean generateDeltas)
+   в Squirrel.Update.Program.executeCommandLine(String[] args)
+   в Squirrel.Update.Program.main(String[] args)
+---> (Внутреннее исключение #0) System.Exception: Failed to modify resources, command invoked was: 'D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\rcedit.exe "D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\Setup.exe" --set-version-string "CompanyName" "Vadim Dokurno" --set-version-string "LegalCopyright" "Copyright © 2019 Vadim Dokurno" --set-version-string "FileDescription" "My OOTP course work" --set-version-string "ProductName" "My OOTP course work" --set-file-version 1.0.0 --set-product-version 1.0.0'
+
+Output was:
+Fatal error: Unable to load file
+   в Squirrel.Update.Program.<setPEVersionInfoAndIcon>d__20.MoveNext()<---
+
+2019-05-23 21:11:20> Program: Starting Squirrel Updater: --releasify GamingAssistant.1.0.0.nupkg
+2019-05-23 21:11:20> Program: Bootstrapper EXE found at:D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2019-05-23 21:11:20> Program: Creating release package: D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant.1.0.0.nupkg
+2019-05-23 21:11:20> ReleasePackage: Creating release package: D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant.1.0.0.nupkg => D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\GamingAssistant-1.0.0-full.nupkg
+2019-05-23 21:11:21> ReleasePackage: Extracting dependent packages: []
+2019-05-23 21:11:21> ReleasePackage: Removing unnecessary data
+2019-05-23 21:11:21> ReleasePackage: No release notes found in C:\Users\Vadim\AppData\Local\SquirrelTemp\tempa\GamingAssistant.nuspec
+2019-05-23 21:11:23> Program: Building embedded zip file for Setup.exe
+2019-05-23 21:11:24> Unhandled exception: System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: Failed to modify resources, command invoked was: 'D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\rcedit.exe "D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\Setup.exe" --set-version-string "CompanyName" "Vadim" --set-version-string "LegalCopyright" "Copyright © 2019 Vadim" --set-version-string "FileDescription" "My OOTP course work" --set-version-string "ProductName" "My OOTP course work" --set-file-version 1.0.0 --set-product-version 1.0.0'
+
+Output was:
+Fatal error: Unable to load file
+   в Squirrel.Update.Program.<setPEVersionInfoAndIcon>d__20.MoveNext()
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в Squirrel.Update.Program.<>c__DisplayClass10_0.<Releasify>b__6()
+   в Squirrel.Utility.<>c__DisplayClass8_0.<Retry>b__0()
+   в Squirrel.Utility.Retry[T](Func`1 block, Int32 retries)
+   в Squirrel.Utility.Retry(Action block, Int32 retries)
+   в Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi, String frameworkVersion, Boolean generateDeltas)
+   в Squirrel.Update.Program.executeCommandLine(String[] args)
+   в Squirrel.Update.Program.main(String[] args)
+---> (Внутреннее исключение #0) System.Exception: Failed to modify resources, command invoked was: 'D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\packages\squirrel.windows.1.9.1\tools\rcedit.exe "D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Release\Releases\Setup.exe" --set-version-string "CompanyName" "Vadim" --set-version-string "LegalCopyright" "Copyright © 2019 Vadim" --set-version-string "FileDescription" "My OOTP course work" --set-version-string "ProductName" "My OOTP course work" --set-file-version 1.0.0 --set-product-version 1.0.0'
+
+Output was:
+Fatal error: Unable to load file
+   в Squirrel.Update.Program.<setPEVersionInfoAndIcon>d__20.MoveNext()<---
+

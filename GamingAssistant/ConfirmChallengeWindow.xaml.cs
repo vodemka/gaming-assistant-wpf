@@ -20,9 +20,6 @@ using System.Windows.Navigation;
 
 namespace GamingAssistant
 {
-    /// <summary>
-    /// Логика взаимодействия для ConfirmChallengeWindow.xaml
-    /// </summary>
     public partial class ConfirmChallengeWindow : Window
     {
         ActiveChallenges activeChallenges;
@@ -82,14 +79,7 @@ namespace GamingAssistant
             activeChallengeConfirmDate.Text = DateOfConfirm;
             if (flag)
             {
-                //try
-                //{
                     activeChallengeProofLink.NavigateUri = new Uri(ProofLink);
-                //}
-                //catch (UriFormatException e)
-                //{
-                //    MaterialMessageBox.Show("Ссылка не корректна", "Ошибка");
-                //}
             }
         }
 
