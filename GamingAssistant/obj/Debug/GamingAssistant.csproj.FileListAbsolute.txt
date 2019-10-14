@@ -202,3 +202,17 @@ D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssist
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.csproj.CopyComplete
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.exe
 D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\obj\Debug\GamingAssistant.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\DeltaCompressionDotNet.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\DeltaCompressionDotNet.MsDelta.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\DeltaCompressionDotNet.PatchApi.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Mono.Cecil.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Mono.Cecil.Mdb.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Mono.Cecil.Pdb.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Mono.Cecil.Rocks.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\NuGet.Squirrel.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\SharpCompress.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Splat.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Squirrel.dll
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\NuGet.Squirrel.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Splat.pdb
+D:\!Фит ПОИТ\!4 семестр\!КУРСОВОЙ\На гит\GamingAssistant\GamingAssistant\bin\Debug\Squirrel.pdb
